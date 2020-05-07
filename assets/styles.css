@@ -1,0 +1,245 @@
+/* FONT FACE */
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('fonts/ProximaNova-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('fonts/CaviarDreams.ttf');
+}
+
+@font-face {
+    font-family: "Caviar Dreams";
+    src: url("fonts/CaviarDreams_Bold.ttf");
+    font-weight: bold;
+}
+
+/* VARIABLES */
+:root {
+    --light: rgb(255, 245, 241);
+    --light2: #F8B195;
+    --bright: rgb(206, 94, 131);
+    --bright2: #F67280;
+    --dark: rgb(104, 73, 131);
+    --dark2: rgb(19, 13, 15);
+
+    --primary-font: 'Proxima Nova';
+    --secondary-font: 'Caviar Dreams';
+}
+
+* {
+    font-family: var(--primary-font);
+}
+
+/* LINKS */
+a:hover {
+    text-decoration: none;
+    color: var(--light2);
+}
+
+a {
+    color: var(--bright2)
+}
+
+/* BUTTONS */
+.btn {
+    border-radius: 3rem;
+    color: var(--light);
+    background-color: var(--bright2);
+    border-color: var(--bright2);
+    padding: .5rem 1.5rem;
+}
+
+.btn:hover {
+    background-color: var(--dark);
+    color: var(--light);
+    border-color: var(--dark);
+}
+
+.btn-outline {
+    border-radius: 3rem;
+    color: var(--dark);
+    background-color: transparent;
+    border-color: var(--bright2);
+    padding: .5rem 1.5rem;
+}
+
+.btn-outline:hover {
+    background-color: var(--light);
+    color: var(--dark);
+    border-color: var(--bright2);
+}
+
+/* COLOR SCHEMES */
+.bg-dark {
+    background-color: var(--dark) !important;
+}
+
+.bg-light {
+    background-color: var(--light) !important;
+}
+
+.bg-bright {
+    background-color: var(--bright);
+}
+
+.text-light {
+    color: var(--light) !important;
+}
+
+/* MAIN */
+main {
+    min-height: 100vh;
+    margin-top: 3.6rem
+}
+
+main > header {
+    background-color: var(--bright2);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+main h1,
+main h2 {
+    font-family: var(--secondary-font);
+    font-weight: bold;
+}
+
+/* SPONSORS */
+#sponsors img:hover {
+    opacity: .6;
+    transition: all .3s;
+}
+
+#sponsors div {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+}
+.pearl img {
+    max-height: 200px;
+}
+
+.gold img {
+    max-height: 150px;
+}
+
+.silver img, .custom img {
+    max-height: 100px;
+}
+
+/* COLLAPSABLE CONTENT */
+.collapser {
+    color: var(--bright2);
+    font-size: 1.25rem;
+    padding: 1rem 0rem;
+    font-weight: normal !important;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.collapser:after {
+    content: "\2212";
+}
+
+.collapsed {
+    border-bottom: 2px solid var(--bright);
+    display: flex;
+    justify-content: space-between;
+    content: "\2212";
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.collapsed:after {
+    content: '\002B' !important;
+}
+
+.collapser + div {
+    padding-left: 1rem;
+    border-left: 2px solid var(--bright);
+}
+
+/* TABLES */
+.table {
+    max-width: 900px;
+}
+
+.table .row {
+    border-bottom: 1px solid var(--bright);
+}
+
+.table .row:nth-of-type(odd) {
+    background-color: rgba(104, 33, 57, 0.04);
+}
+
+.table .th {
+    background-color: var(--bright) !important;
+}
+
+/* HEADSHOT */
+.headshot {
+    width: 175px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-size: cover !important;
+    text-align: center;
+    background-color: #F8B195 !important;
+}
+
+/* NAVBAR */
+.navbar-brand span,
+.navbar-brand b {
+    font-family: var(--secondary-font) !important;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.dropdown-menu {
+    border: none; 
+}
+
+.dropdown-menu a:active {
+    background-color: white;
+    color: var(--bright);
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark);
+    color: var(--light) !important;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li i {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+footer h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--light2);
+}
+
+footer a {
+    color: var(--light);
+}
