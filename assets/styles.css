@@ -91,8 +91,8 @@ a {
     margin-top: -60px !important;
     padding-top: 60px !important;
     background-color: #f6bbbf;
-    background: url('/assets/images/jumbotron-pattern.jpg');
-    background-size: contain;
+    /* background: url('/assets/images/jumbotron-pattern.jpg'); */
+    /* background-size: contain; */
 }
 
 .jumbotron-fluid .btn {
@@ -125,7 +125,6 @@ main {
 }
 
 main > header {
-    background-color: var(--bright2);
     text-align: center;
     padding-bottom: 1.5rem;
     padding-top: 5.5rem !important;
