@@ -1,17 +1,17 @@
 /* FONT FACE */
 @font-face {
     font-family: 'Proxima Nova';
-    src: url('/assets/fonts/ProximaNova-Regular.otf');
+    src: url('fonts/ProximaNova-Regular.otf');
 }
 
 @font-face {
     font-family: 'Caviar Dreams';
-    src: url('/assets/fonts/CaviarDreams.ttf');
+    src: url('fonts/CaviarDreams.ttf');
 }
 
 @font-face {
     font-family: "Caviar Dreams";
-    src: url("/assets/fonts/CaviarDreams_Bold.ttf");
+    src: url("fonts/CaviarDreams_Bold.ttf");
     font-weight: bold;
 }
 
@@ -43,7 +43,7 @@ p {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
 }
 
 /* LINKS */
@@ -91,8 +91,8 @@ a {
     margin-top: -60px !important;
     padding-top: 60px !important;
     background-color: #f6bbbf;
-    /* background: url('/assets/images/jumbotron-pattern.jpg'); */
-    /* background-size: contain; */
+    background: url('images/jumbotron-pattern.jpg');
+    background-size: contain;
 }
 
 .jumbotron-fluid .btn {
@@ -331,7 +331,7 @@ footer a:hover {
 }
 
 #footer-border {
-    background-image: url('/assets/images/footer-border.svg');
+    background-image: url('images/footer-border.svg');
     background-position: bottom;
     background-size: contain;
     background-repeat: repeat-x ;
