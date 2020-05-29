@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: "Caviar Dreams";
-    src: url("fonts/CaviarDreams_Bold.ttf");
+    src: url("/assets/fonts/CaviarDreams_Bold.ttf");
     font-weight: bold;
 }
 
@@ -90,6 +90,7 @@ a {
     /* animation: gradient 25s ease infinite; */
     margin-top: -60px !important;
     padding-top: 60px !important;
+    background-color: #f6bbbf;
     background: url('/assets/images/jumbotron-pattern.jpg');
     background-size: contain;
 }
