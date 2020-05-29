@@ -1,0 +1,539 @@
+html,h1,h2,h3,h4,h5,h6,div,span,p{
+  font-family: 'Roboto' !important;
+}
+h1{
+  color: #4883de; 
+  font-weight: 300; 
+}
+
+.main{
+  margin: 0;
+  padding: 0;
+  padding:5px;
+}
+
+.oval1{
+  width: 50%;
+  height: 50%;    
+  overflow: hidden;
+  transform: rotate(0deg);
+  animation: spin-oval1 120s infinite linear; /* IE 10+, Fx 29+ */
+}
+.oval1:after{  
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;    
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: rotate(0deg);
+  animation: spin-oval11 120s infinite linear;
+}
+
+.oval2{ 
+  width: 50%;
+  height: 50%;    
+  overflow: hidden;
+  transform: rotate(45deg);
+  animation: spin-oval2 120s infinite linear; /* IE 10+, Fx 29+ */
+}
+.oval2:after{  
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;    
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: rotate(45deg);
+  animation: spin-oval22 120s infinite linear;
+}
+
+.oval3{
+  width: 50%;
+  height: 50%;    
+  overflow: hidden;
+  transform: rotate(90deg);
+  animation: spin-oval3 120s infinite linear; /* IE 10+, Fx 29+ */
+}
+.oval3:after{  
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;    
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: rotate(90deg);
+  animation: spin-oval33 120s infinite linear;
+}
+.oval4{
+  width: 50%;
+  height: 50%;    
+  overflow: hidden;
+  transform: rotate(-45deg);
+  animation: spin-oval4 120s infinite linear; /* IE 10+, Fx 29+ */
+}
+.oval4:after{  
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;    
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: rotate(-45deg);
+  animation: spin-oval44 120s infinite linear;
+}
+
+
+.oval1,
+.oval2,
+.oval3,
+.oval4{   
+  top: calc(50% - 240px);
+  left: calc(50% - 400px);
+  width: 800px;
+  height: 480px;
+  opacity: .15;
+  position:absolute;
+  display: block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  float: none;
+  z-index: auto;
+  cursor: default;
+  margin: 0;
+  padding: 0;  
+  border: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  -webkit-transform: none;
+  transform: none;
+  -webkit-transform-origin: 50% 50% 0;
+  transform-origin: 50% 50% 0;
+
+}
+
+@keyframes spin-oval1{ 
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);  
+  }
+}
+@keyframes spin-oval11{ 
+  from {
+    transform: rotate(-0deg);
+  }
+  to {
+    transform: rotate(-360deg);  
+  }
+}
+@keyframes spin-oval2 { 
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);  
+  }
+}
+@keyframes spin-oval22 { 
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(-405deg);  
+  }
+}
+@keyframes spin-oval3 { 
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(450deg);  
+  }
+}
+@keyframes spin-oval33 { 
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(-450deg);  
+  }
+}
+@keyframes spin-oval4 { 
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(315deg);  
+  }
+}
+@keyframes spin-oval44 { 
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(-315deg);  
+  }
+}
+
+.oval1:after,
+.oval2:after,
+.oval3:after,
+.oval4:after{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8ac1ea+40,c978f4+60,c978f4+60 */
+  background: #8ac1ea; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #8ac1ea 40%, #c978f4 60%, #c978f4 60%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(40%,#8ac1ea), color-stop(60%,#c978f4), color-stop(60%,#c978f4)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #8ac1ea 40%,#c978f4 60%,#c978f4 60%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #8ac1ea 40%,#c978f4 60%,#c978f4 60%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #8ac1ea 40%,#c978f4 60%,#c978f4 60%); /* IE10+ */
+  background: linear-gradient(45deg,  #8ac1ea 40%,#c978f4 60%,#c978f4 60%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ac1ea', endColorstr='#c978f4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.main{
+  margin: 0;
+  padding: 0;
+  padding:5px;
+}
+
+.oval1s{
+  width: 50%;
+  height: 50%;    
+  overflow: hidden;
+  transform: rotate(0deg);
+  animation: spin-oval1s 50s infinite linear reverse; /* IE 10+, Fx 29+ */
+}
+.oval1s:after{  
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;    
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: rotate(0deg);
+  animation: spin-oval1s1 50s infinite linear reverse;
+}
+
+.oval2s{ 
+  width: 50%;
+  height: 50%;    
+  overflow: hidden;
+  transform: rotate(45deg);
+  animation: spin-oval2s 50s infinite linear reverse; /* IE 10+, Fx 29+ */
+}
+.oval2s:after{  
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;    
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: rotate(45deg);
+  animation: spin-oval2s2 50s infinite linear reverse;
+}
+
+.oval3s{
+  width: 50%;
+  height: 50%;    
+  overflow: hidden;
+  transform: rotate(90deg);
+  animation: spin-oval3s 50s infinite linear reverse; /* IE 10+, Fx 29+ */
+}
+.oval3s:after{  
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;    
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: rotate(90deg);
+  animation: spin-oval3s3 50s infinite linear reverse;
+}
+.oval4s{
+  width: 50%;
+  height: 50%;    
+  overflow: hidden;
+  transform: rotate(-45deg);
+  animation: spin-oval4s 50s infinite linear reverse; /* IE 10+, Fx 29+ */
+}
+.oval4s:after{  
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;    
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: rotate(-45deg);
+  animation: spin-oval4s4 50s infinite linear reverse;
+}
+
+
+.oval1s,
+.oval2s,
+.oval3s,
+.oval4s{   
+  top: calc(50% - 120px);
+  left: calc(50% - 200px);
+  width: 400px; 
+  height: 240px;
+  opacity: .30;
+  position:absolute;
+  display: block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  float: none;
+  z-index: auto;
+  cursor: default;
+  margin: 0;
+  padding: 0;  
+  border: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  -webkit-transform: none;
+  transform: none;
+  -webkit-transform-origin: 50% 50% 0;
+  transform-origin: 50% 50% 0;
+
+}
+
+@keyframes spin-oval1s{ 
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);  
+  }
+}
+@keyframes spin-oval1s1{ 
+  from {
+    transform: rotate(-0deg);
+  }
+  to {
+    transform: rotate(-360deg);  
+  }
+}
+@keyframes spin-oval2s { 
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);  
+  }
+}
+@keyframes spin-oval2s2 { 
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(-405deg);  
+  }
+}
+@keyframes spin-oval3s { 
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(450deg);  
+  }
+}
+@keyframes spin-oval3s3 { 
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(-450deg);  
+  }
+}
+@keyframes spin-oval4s { 
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(315deg);  
+  }
+}
+@keyframes spin-oval4s4 { 
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(-315deg);  
+  }
+}
+
+.oval1s:after,
+.oval2s:after,
+.oval3s:after,
+.oval4s:after{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8ac1ea+40,c978f4+60,c978f4+60 */
+  background: #8ac1ea; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #8ac1ea 40%, #c978f4 60%, #c978f4 60%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(40%,#8ac1ea), color-stop(60%,#c978f4), color-stop(60%,#c978f4)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #8ac1ea 40%,#c978f4 60%,#c978f4 60%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #8ac1ea 40%,#c978f4 60%,#c978f4 60%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #8ac1ea 40%,#c978f4 60%,#c978f4 60%); /* IE10+ */
+  background: linear-gradient(45deg,  #8ac1ea 40%,#c978f4 60%,#c978f4 60%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ac1ea', endColorstr='#c978f4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.white-circle{
+  position: absolute;
+  border: 3px solid white;
+  background: transparent;
+  border-radius: 50%;
+  left: calc(50% - 90px);
+  top: calc(50% - 90px);
+  width: 180px;
+  height: 180px;
+}
+.text-center{
+  text-align: center;
+}
+
+
+@media screen and (max-width: 1200px){
+  .oval1,
+  .oval2,
+  .oval3,
+  .oval4{   
+    top: calc(50% - 240px);
+    left: calc(50% - 400px);
+    width: 800px;
+    height: 480px;
+  }
+
+  .oval1s,
+  .oval2s,
+  .oval3s,
+  .oval4s{   
+    top: calc(50% - 120px);
+    left: calc(50% - 200px);
+    width: 400px;
+    height: 240px;
+  }
+
+
+}
+@media screen and (max-width: 960px){
+  .oval1,
+  .oval2,
+  .oval3,
+  .oval4{   
+    top: calc(50% - 192px);
+    left: calc(50% - 320px);
+    width: 640px;
+    height: 384px;
+  }
+
+  .oval1s,
+  .oval2s,
+  .oval3s,
+  .oval4s{   
+    top: calc(50% - 96px);
+    left: calc(50% - 160px);
+    width: 320px; 
+    height: 192px;
+  }
+  .white-circle{
+    left: calc(50% - 72px);
+    top: calc(50% - 72px);
+    width: 144px;
+    height: 144px;
+  }
+  .logo-text{
+    font-size: 70px;
+    top: calc(50% - 39px);
+    left: calc(50% - 47px);
+  }
+}
+@media screen and (max-width: 640px){
+  .oval1,
+  .oval2,
+  .oval3,
+  .oval4{   
+    top: calc(50% - 154px);
+    left: calc(50% - 256px);
+    width: 512px;
+    height: 308px;
+  }
+  .oval1s,
+  .oval2s,
+  .oval3s,
+  .oval4s{   
+    top: calc(50% - 77px);
+    left: calc(50% - 128px);
+    width: 256px; 
+    height: 154px;
+  }
+  .white-circle{
+    left: calc(50% - 58px);
+    top: calc(50% - 58px);
+    width: 115px;
+    height: 115px;
+  }
+  .logo-text{
+    font-size: 55px;
+    top: calc(50% - 33px);
+    left: calc(50% - 37px);
+  }
+}
+@media screen and (max-width: 480px){
+  .oval1,
+  .oval2,
+  .oval3,
+  .oval4{   
+    top: calc(50% - 123px);
+    left: calc(50% - 205px);
+    width: 410px;
+    height: 246px;
+  }
+  .oval1s,
+  .oval2s,
+  .oval3s,
+  .oval4s{   
+    top: calc(50% - 62px);
+    left: calc(50% - 102px);
+    width: 205px; 
+    height: 123px;
+  }
+  .white-circle{
+    left: calc(50% - 46px);
+    top: calc(50% - 46px);
+    width: 92px;
+    height: 92px;
+  }
+}

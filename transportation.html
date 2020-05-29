@@ -45,6 +45,16 @@
         $(document).ready(function () {
             $("body>footer").load("./components/footer.html");
             $("body>header").load("./components/navbar.html");
+            
+            var scroll_pos = 0;
+            $(document).scroll(function() {
+                scroll_pos = $(this).scrollTop();
+                if(scroll_pos > 100) {
+                    $(".navbar").css('background-color', '#f6bbbf');
+                } else {
+                    $(".navbar").css('background-color', 'transparent');
+                }
+            });
         });
     </script>
 

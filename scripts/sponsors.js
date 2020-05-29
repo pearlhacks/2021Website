@@ -7,7 +7,7 @@ function buildHTMLString(data) {
     data.forEach((sponsor) => {
         if (sponsor['Sponsor Tier'] === 'Pearl') {
             pearl += 
-            `<div class='col-12 col-lg-6 pearl'>
+            `<div class='col-12 col-lg-6 pearl p-1'>
                 <a href="${sponsor['Sponsor Site URL']}" target='new'>
                     <img src='${sponsor['Sponsor Image URL']}' class='img-fluid' alt='${sponsor['Sponsor Title']}'>
                 </a>
@@ -17,7 +17,7 @@ function buildHTMLString(data) {
         else if (sponsor['Sponsor Tier'] === 'Gold') {
             console.log(sponsor)
             gold += 
-            `<div class='col-12 col-lg-4 gold'>
+            `<div class='col-12 col-lg-4 gold p-1'>
                 <a href="${sponsor['Sponsor Site URL']}" target='new'>
                     <img src='${sponsor['Sponsor Image URL']}' class='img-fluid' alt='${sponsor['Sponsor Title']}'>
                 </a>
@@ -26,7 +26,7 @@ function buildHTMLString(data) {
 
         else if (sponsor['Sponsor Tier'] === 'Silver') {
             silver += 
-            `<div class='col-12 col-lg-3 silver'>
+            `<div class='col-12 col-lg-3 silver p-1'>
                 <a href="${sponsor['Sponsor Site URL']}" target='new'>
                     <img src='${sponsor['Sponsor Image URL']}' class='img-fluid' alt='${sponsor['Sponsor Title']}'>
                 </a>
@@ -35,7 +35,7 @@ function buildHTMLString(data) {
         
         else {
             custom += 
-            `<div class='col-12 col-lg-2 custom'>
+            `<div class='col-12 col-lg-2 custom p-1'>
                 <a href="${sponsor['Sponsor Site URL']}" target='new'>
                     <img src='${sponsor['Sponsor Image URL']}' class='img-fluid' alt='${sponsor['Sponsor Title']}'>
                 </a>

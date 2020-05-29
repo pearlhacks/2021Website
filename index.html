@@ -24,10 +24,11 @@
     <link rel="icon" href="/assets/images/ph-favicon.png" type="image/png" />
     <link rel="shortcut icon" href="/assets/images/ph-favicon.png" type="image/png" />
 
-    <!-- CSS (Bootstrap, Custom Styles -->
+    <!-- CSS (Bootstrap, Custom Styles, Fonts) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 
     <!-- Bootstrap Script Requirements (Slim JQuery, Popper, Bootstrap, Font Awesome) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
@@ -45,6 +46,15 @@
         $(document).ready(function () {
             $("body>footer").load("./components/footer.html");
             $("body>header").load("./components/navbar.html");
+            var scroll_pos = 0;
+            $(document).scroll(function() {
+                scroll_pos = $(this).scrollTop();
+                if(scroll_pos > 300) {
+                    $(".navbar").css('background-color', '#f6bbbf');
+                } else {
+                    $(".navbar").css('background-color', 'transparent');
+                }
+            });
         });
     </script>
     <script src="scripts/sheetsToJSON.js"></script>
@@ -57,38 +67,76 @@
 
     </header>
     <main>
-        <div class='jumbotron-fluid mt-5 p-5 bg-light'>
-            <div class='container'>
-                <h1 class="display-4">PEARL HACKS</h1>
-                <p class="lead">Spring 2021<br> UNC Chapel Hill</p>
-                <p>
-                    <a class="btn" href="#" role="button">Go to Interest Form</a>
-
+        <!-- JUMBOTRON -->
+        <div class='jumbotron-fluid mt-5 p-5'>
+            <div class='pt-5'>
+                <div class='row'>
+                    <div class='col-7'>
+                        <h1 class='lead'>grow with</h1>
+                        <h1 class="display-4">PEARL HACKS</h1>
+                        <h2 class='h4'> Spring 2021 @ UNC Chapel Hill</h2>
+                        <p>
+                            <a class="btn" href="#" role="button">Go to Interest Form</a>
+                        </p>
+                    </div>
+                    <div class='col-5'>
+                        fairy??
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- HOME PAGE STUFF -->
+        <div class='bg-success'>
+            <div class='container py-5'>
+                <p class='lead text-center'>
+                    Pearl Hacks is an annual hackathon for female and non-binary students at UNC
+                    Chapel Hill. We especially cater to first-time hackers who are looking for a supportive environment
+                    to explore technology!
+                    <br>
+                    <a class="btn mt-4" href="aboutus.html" role="button">Read About Us</a>
                 </p>
             </div>
         </div>
+        <div class=''>
+            <div class='container-fluid px-lg-5 py-5'>
+                <div class='row'>
+                    <div class='col-12 col-lg-4'>
+                        <h2 class='h5 text-uppercase font-weight-bold'>Don't know how to code?</h2>
+                        <p>Come anways! Pearl Hacks takes special care to ensure that we are beginner-friendly. We have
+                            workshops, mentors, and fun events in place to make sure people from all skill-levels feel
+                            welcome. <a href='faq.html'>Read more FAQ's</a></p>
+                    </div>
+                    <div class='col-12 col-lg-4'>
+                        <h2 class='h5 text-uppercase font-weight-bold'>Sponsor us!</h2>
+                        <p>
+                            We’re actively recruiting sponsors until next January! Check out last year's <a href=""
+                                target='new'>sponsorship guide</a> for an idea of what sponsorship might look like for
+                            you. For
+                            more information, reach out to us at <a
+                                href="mailto:sponsor@pearlhacks.com">sponsor@pearlhacks.com</a>. We’d love to have you!
+                        </p>
+                    </div>
+                    <div class='col-12 col-lg-4'>
+                        <h2 class='h5 text-uppercase font-weight-bold'>Check out past projects</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sed numquam aliquid,
+                            impedit itaque provident dolores veniam soluta deserunt at iste odit porro exercitationem,
+                            ducimus quos ea recusandae saepe vero.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SPONSORS -->
         <div>
             <div class='container py-5'>
-                <h2>Stuff about PH</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sed numquam aliquid, impedit itaque provident dolores veniam soluta deserunt at iste odit porro exercitationem, ducimus quos ea recusandae saepe vero.</p>
-            </div>
-        </div>
-        <div>
-            <div class='container pb-5'>
-                <h2>Sponsors</h2>
-                <h3>
-                Want to sponsor us?
-                </h3>
-                <p>
-                    We’re actively recruiting sponsors until next January! Check out last year's <a href="" target='new'>sponsorship guide</a> for an idea of what sponsorship might look like for you. For more information, reach out to us at <a href="mailto:sponsor@pearlhacks.com">sponsor@pearlhacks.com</a>. We’d love to have you!
-                </p>
+                <h2 class='text-center'>Sponsors</h2>
                 <div id='sponsors' class='d-flex justify-content-center'>
 
                 </div>
             </div>
         </div>
-        
-        
+
+
     </main>
     <footer>
 
