@@ -1,12 +1,12 @@
 function buildHTMLString(data, header) {
     let html = "<div class='table mt-4 rounded'>";
-    html += `<div class='rounded-top row text-center font-weight-bold th py-2 text-uppercase'>
+    html += `<div class='rounded-top row mx-0 text-center font-weight-bold th py-2 text-uppercase'>
                 <div class='col-12'>  
                     ${header}
                 </div>
             </div>`;
     data.forEach((event) => {
-        let row = "<div class='row text-center py-2'>";
+        let row = "<div class='row mx-0 text-center py-2'>";
         row += `
         <div class='col-3 font-weight-bold'>
             ${event['Time']}

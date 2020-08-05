@@ -1,133 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150933241-1"></script>
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-150933241-1'></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
-        gtag("js", new Date());
-        gtag("config", "UA-150933241-1");
+        gtag('js', new Date());
+        gtag('config', 'UA-150933241-1');
     </script>
 
     <!-- Meta Tags-->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Cache-control" content="public">
-    <meta name="description"
-        content="Pearl Hacks is a hackathon for female and non-binary students. We especially cater to first-time hackers who are looking for a supportive environment to explore technology.">
-    <meta name="google-site-verification" content="BVA1NKpsy9IenrjkPDUVV9naJOgnlX8MpPhV5wT_c0w" />
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='Cache-control' content='public'>
+    <meta name='description'
+        content='Pearl Hacks is a hackathon for female and non-binary students. We especially cater to first-time hackers who are looking for a supportive environment to explore technology.'>
+    <meta name='google-site-verification' content='BVA1NKpsy9IenrjkPDUVV9naJOgnlX8MpPhV5wT_c0w' />
 
     <!-- Favicon -->
-    <link rel="icon" href="/assets/images/ph-favicon.png" type="image/png" />
-    <link rel="shortcut icon" href="/assets/images/ph-favicon.png" type="image/png" />
+    <link rel='icon' href='/assets/images/ph-favicon.png' type='image/png' />
+    <link rel='shortcut icon' href='/assets/images/ph-favicon.png' type='image/png' />
 
     <!-- CSS (Bootstrap, Custom Styles, Fonts) -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'
+        integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous'>
+    <link rel='stylesheet' href='assets/styles.css'>
+    <link href='https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap' rel='stylesheet'>
     <!-- Bootstrap Script Requirements (Slim JQuery, Popper, Bootstrap, Font Awesome) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'>
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/54e7e1ecc6.js" crossorigin="anonymous"></script>
+    <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'
+        integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo'
+        crossorigin='anonymous'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'
+        integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6'
+        crossorigin='anonymous'></script>
+    <script src='https://kit.fontawesome.com/54e7e1ecc6.js' crossorigin='anonymous'></script>
 
     <!-- Custom Scripts -->
     <script>
         $(document).ready(function () {
-            $("body>footer").load("./components/footer.html");
-            $("body>header").load("./components/navbar.html");
-            var scroll_pos = 0;
+            $('body>footer').load('./components/footer.html');
+            $('body>header').load('./components/navbar.html');
+        });
+        var scroll_pos = 0;
             $(document).scroll(function() {
                 scroll_pos = $(this).scrollTop();
-                if(scroll_pos > 300) {
-                    $(".navbar").css('background-color', '#f6bbbf');
+                if(scroll_pos > 100) {
+                    $('.navbar').css('box-shadow', '0px 2px 3px rgb(0,0,0,.3)');
                 } else {
-                    $(".navbar").css('background-color', 'transparent');
+                    $('.navbar').css('box-shadow', 'none');
                 }
             });
-        });
     </script>
-    <script src="scripts/sheetsToJSON.js"></script>
-    <script src="scripts/sponsors.js"></script>
+    <script src='scripts/sheetsToJSON.js'></script>
+    <script src='scripts/sponsors.js'></script>
     <title>Pearl Hacks</title>
 </head>
 
 <body>
-    <header>
-
-    </header>
+    <header></header>
     <main>
         <!-- JUMBOTRON -->
-        <div class='jumbotron-fluid mt-5 p-5'>
-            <div class='pt-5'>
-                <div class='row'>
-                    <div class='col-7'>
-                        <h1 class='lead'>grow with</h1>
-                        <h1 class="display-4">PEARL HACKS</h1>
-                        <h2 class='h4'> Spring 2021 @ UNC Chapel Hill</h2>
-                        <p>
-                            <a class="btn" href="#" role="button">Go to Interest Form</a>
+        <div class='jumbotron mt-5 p-md-5 bg-white'>
+            <div class='pt-1 px-md-4'>
+                <div class='row px-md-5 d-flex align-content-center'>
+                    <div class='col-12 col-lg-7 d-flex flex-column justify-content-center align-items-md-start align-items-center'>
+                        <h1 class='lead pb-0 mb-0'>grow with</h1>
+                        <h1 class='display-4 text-center text-md-left'>PEARL HACKS</h1>
+                        <h2 class='h4'>Spring 2021</h2>
+                        <h2 class='h4'>UNC Chapel Hill</h2>
+                        <p class='pt-3'>
+                            <a class='btn' href='#' role='button'>Go to Interest Form</a>
                         </p>
                     </div>
-                    <div class='col-5'>
-                        fairy??
+                    <div class='col-12 col-lg-5'>
+                        <!-- fairy?? -->
                     </div>
                 </div>
-                
             </div>
         </div>
+
         <!-- HOME PAGE STUFF -->
-        <div class='bg-light'>
+        <div class='bg-primary'>
             <div class='container py-5'>
+                <h2 class='overline text-center text-uppercase'>Who are we?</h2>
                 <p class='lead text-center'>
                     Pearl Hacks is an annual hackathon for female and non-binary students at UNC
                     Chapel Hill. We especially cater to first-time hackers who are looking for a supportive environment
                     to explore technology!
                     <br>
-                    <a class="btn mt-4" href="aboutus.html" role="button">Read About Us</a>
+                    <a class='btn mt-4' href='aboutus.html' role='button'>Read About Us</a>
                 </p>
             </div>
         </div>
-        <div class=''>
+        <div>
             <div class='container-fluid px-lg-5 py-5'>
-                <div class='row'>
-                    <div class='col-12 col-lg-4'>
+                <div class='row bg-light rounded p-5'>
+                    <div class='col-12 col-lg-4 bg-white shadow-sm rounded'>
                         <h2 class='h5 text-uppercase font-weight-bold'>Don't know how to code?</h2>
-                        <p>Come anways! Pearl Hacks takes special care to ensure that we are beginner-friendly. We have
-                            workshops, mentors, and fun events in place to make sure people from all skill-levels feel
-                            welcome. <a href='faq.html'>Read more FAQ's</a></p>
+                        <p>Come anways! We have
+                            workshops, mentors, and fun events in place to for students of all skill levels. <a href='faq.html'>Read more FAQ's</a></p>
                     </div>
-                    <div class='col-12 col-lg-4'>
+                    <div class='col-12 col-lg-4 bg-white shadow-sm rounded'>
                         <h2 class='h5 text-uppercase font-weight-bold'>Sponsor us!</h2>
                         <p>
-                            We’re actively recruiting sponsors until next January! Check out last year's <a href=""
-                                target='new'>sponsorship guide</a> for an idea of what sponsorship might look like for
-                            you. For
-                            more information, reach out to us at <a
-                                href="mailto:sponsor@pearlhacks.com">sponsor@pearlhacks.com</a>. We’d love to have you!
+                            We’re recruiting sponsors until January! For
+                            more information, email <a
+                                href='mailto:sponsor@pearlhacks.com'>sponsor@pearlhacks.com</a>. 
                         </p>
                     </div>
-                    <div class='col-12 col-lg-4'>
-                        <h2 class='h5 text-uppercase font-weight-bold'>Check out past projects</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sed numquam aliquid,
-                            impedit itaque provident dolores veniam soluta deserunt at iste odit porro exercitationem,
-                            ducimus quos ea recusandae saepe vero.</p>
+                    <div class='col-12 col-lg-4 bg-white shadow-sm rounded'>
+                        <h2 class='h5 text-uppercase font-weight-bold'>Explore Past projects</h2>
+                        <p>Check out projects and prizes from previous years of Pearl Hacks on our <a href='https://pearlhacks2020.devpost.com/' target='new'>Devpost</a>.</p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- SPONSORS -->
-        <div>
+        <div class=''>
             <div class='container py-5'>
                 <h2 class='text-center'>Sponsors</h2>
                 <div id='sponsors' class='d-flex justify-content-center'>
@@ -135,12 +129,7 @@
                 </div>
             </div>
         </div>
-
-
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
 </body>
-
 </html>

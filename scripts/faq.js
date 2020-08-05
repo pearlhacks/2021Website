@@ -5,18 +5,18 @@ function buildHTMLString(data, target) {
     data.forEach((question, i) => {
         if (i < data.length / 2) {
             col1 += `
-            <btn class='collapse-wrapper'>
+            <div class='rounded collapse-wrapper mb-2'>
                 <h3 class='mt-lg-2 font-weight-bold collapser collapsed' data-toggle="collapse" aria-expanded="false" data-target="#${target}${i}">${question['Question']}</h3>
-                <div class="collapse" id="${target}${i}">${question['Answer']}</div>
-            </btn>`
+                <div class="collapse pb-2 pr-2" id="${target}${i}">${question['Answer']}</div>
+            </div>`
         }
 
         else {
             col2 += `
-            <btn class='collapse-wrapper'>
+            <div class='rounded collapse-wrapper mb-2'>
                 <h3 class='mt-lg-2 font-weight-bold collapser collapsed' data-toggle="collapse" aria-expanded="false" data-target="#${target}${i}">${question['Question']}</h3>
-                <div class="collapse" id="${target}${i}">${question['Answer']}</div>
-            </btn>`
+                <div class="collapse pb-2 pr-2" id="${target}${i}">${question['Answer']}</div>
+            </div>`
         }
     });
     col1 += "</div>"

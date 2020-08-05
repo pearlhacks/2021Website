@@ -15,7 +15,6 @@ function buildHTMLString(data) {
         }
 
         else if (sponsor['Sponsor Tier'] === 'Gold') {
-            console.log(sponsor)
             gold += 
             `<div class='col-12 col-lg-4 gold p-1'>
                 <a href="${sponsor['Sponsor Site URL']}" target='new'>
@@ -50,7 +49,6 @@ function buildHTMLString(data) {
 }
 
 $(document).ready(function () {
-    // Director Info
     fetchData('1biudrolhcYpl1ldsUFrGwR38bS3UaBWApW-ui1x1Gvc', '1').then((data) => {
         document.getElementById("sponsors").innerHTML = buildHTMLString(data)
     });
