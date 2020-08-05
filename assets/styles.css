@@ -35,7 +35,7 @@
 }
 
 #mlh-badge {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 90px !important;
     right: 10px;
@@ -156,6 +156,10 @@ h1.lead {
 .bg-primary {
     background-color: var(--bright2) !important;
     color: white !important;
+}
+
+.bg-light {
+    background-color: var(--light2_transparent) !important;
 }
 
 main h1,
