@@ -55,6 +55,87 @@
                     $('.navbar').css('box-shadow', 'none');
                 }
             });
+
+            var WIDTH;
+var HEIGHT;
+var canvas;
+var con;
+var g;
+var pxs = new Array();
+var rint = 50;
+
+$(document).ready(function(){
+  WIDTH = window.innerWidth;
+  HEIGHT = window.innerHeight;
+	$('#container').width(WIDTH).height(HEIGHT);
+	canvas = document.getElementById('pixie');
+	$(canvas).attr('width', WIDTH).attr('height',HEIGHT);
+	con = canvas.getContext('2d');
+	for(var i = 0; i < 50; i++) {
+		pxs[i] = new Circle();
+		pxs[i].reset();
+	}
+	setInterval(draw,rint);
+	setInterval(draw,rint2);
+
+});
+
+function draw() {
+	con.clearRect(0,0,WIDTH,HEIGHT);
+	for(var i = 0; i < pxs.length; i++) {
+		pxs[i].fade();
+		pxs[i].move();
+		pxs[i].draw();
+	}
+}
+
+function Circle() {
+	this.s = {ttl:8000, xmax:5, ymax:2, rmax:10, rt:1, xdef:960, ydef:540, xdrift:4, ydrift: 4, random:true, blink:true};
+
+	this.reset = function() {
+		this.x = (this.s.random ? WIDTH*Math.random() : this.s.xdef);
+		this.y = (this.s.random ? HEIGHT*Math.random() : this.s.ydef);
+		this.r = ((this.s.rmax-1)*Math.random()) + 1;
+		this.dx = (Math.random()*this.s.xmax) * (Math.random() < .5 ? -1 : 1);
+		this.dy = (Math.random()*this.s.ymax) * (Math.random() < .5 ? -1 : 1);
+		this.hl = (this.s.ttl/rint)*(this.r/this.s.rmax);
+		this.rt = Math.random()*this.hl;
+		this.s.rt = Math.random()+1;
+		this.stop = Math.random()*.2+.4;
+		this.s.xdrift *= Math.random() * (Math.random() < .5 ? -1 : 1);
+		this.s.ydrift *= Math.random() * (Math.random() < .5 ? -1 : 1);
+	}
+
+	this.fade = function() {
+		this.rt += this.s.rt;
+	}
+
+	this.draw = function() {
+		if(this.s.blink && (this.rt <= 0 || this.rt >= this.hl)) this.s.rt = this.s.rt*-1;
+		else if(this.rt >= this.hl) this.reset();
+		var newo = 1-(this.rt/this.hl);
+		con.beginPath();
+		con.arc(this.x,this.y,this.r,0,Math.PI*2,true);
+		con.closePath();
+		var cr = this.r*newo;
+		g = con.createRadialGradient(this.x,this.y,0,this.x,this.y,(cr <= 0 ? 1 : cr));
+		g.addColorStop(0.0, 'rgba(238,180,28,'+newo+')');
+		g.addColorStop(this.stop, 'rgba(238,180,28,'+(newo*.2)+')');
+		g.addColorStop(1.0, 'rgba(238,180,28,0)');
+		con.fillStyle = g;
+		con.fill();
+	}
+
+	this.move = function() {
+		this.x += (this.rt/this.hl)*this.dx;
+		this.y += (this.rt/this.hl)*this.dy;
+		if(this.x > WIDTH || this.x < 0) this.dx *= -1;
+		if(this.y > HEIGHT || this.y < 0) this.dy *= -1;
+	}
+
+	this.getX = function() { return this.x; }
+	this.getY = function() { return this.y; }
+}
     </script>
     <script src='scripts/sheetsToJSON.js'></script>
     <script src='scripts/sponsors.js'></script>
@@ -65,15 +146,16 @@
     <header></header>
     <main>
         <!-- JUMBOTRON -->
-        <div class='jumbotron mt-5 p-md-5 bg-white'>
-            <div class='pt-1 px-md-4'>
+        <div class='jumbotron p-md-0 p-md-5 bg-white'>
+            <div class='pt-0 px-md-4 pixie-container'>
+                <canvas class='m-0 p-0' id="pixie"></canvas>
                 <div class='row px-md-5 d-flex align-content-center'>
                     <div class='col-12 col-lg-7 d-flex flex-column justify-content-center align-items-md-start align-items-center'>
-                        <h1 class='lead pb-0 mb-0'>grow with</h1>
+                        <h2 class='lead pb-0 mb-0 text-white'>grow with</h2>
                         <h1 class='display-4 text-center text-md-left'>PEARL HACKS</h1>
-                        <h2 class='h4'>Spring 2021</h2>
-                        <h2 class='h4'>UNC Chapel Hill</h2>
-                        <p class='pt-3'>
+                        <h4 class='text-white'>Spring 2021</h4>
+                        <h4 class='text-white'>UNC Chapel Hill</h4>
+                        <p class='pt-3 raise'>
                             <a class='btn' href='#' role='button'>Go to Interest Form</a>
                         </p>
                     </div>
@@ -85,8 +167,9 @@
         </div>
 
         <!-- HOME PAGE STUFF -->
-        <div class='bg-primary'>
-            <div class='container py-5'>
+        <div class='bg-dark'>
+            <div class='container py-5 pixie-container'>
+                <canvas id="pixie"></canvas>
                 <h2 class='overline text-center text-uppercase'>Who are we?</h2>
                 <p class='lead text-center'>
                     Pearl Hacks is an annual hackathon for female and non-binary students at UNC
@@ -98,14 +181,14 @@
             </div>
         </div>
         <div>
-            <div class='container-fluid px-lg-5 py-5 text-center'>
-                <div class='d-flex justify-content-center bg-light rounded p-5'>
-                    <div class='bg-white shadow-sm rounded p-2 m-2'>
+            <div class='container-fluid px-1 px-lg-5 py-5 text-center'>
+                <div class='d-flex flex-column flex-md-row justify-content-center bg-light rounded px-1 py-3 p-md-5'>
+                    <div class='bg-white shadow-sm rounded my-2 my-md-0 p-2 mx-2'>
                         <h2 class='h5 text-uppercase font-weight-bold'>Don't know how to code?</h2>
                         <p>Come anways! We have
                             workshops, mentors, and fun events for all skill levels. <a href='faq.html'>More FAQ's</a></p>
                     </div>
-                    <div class='bg-white shadow-sm rounded p-2 m-2'>
+                    <div class='bg-white shadow-sm rounded my-2 my-md-0 p-2 mx-2'>
                         <h2 class='h5 text-uppercase font-weight-bold'>Sponsor us!</h2>
                         <p>
                             We’re recruiting sponsors until January. For
@@ -113,7 +196,7 @@
                                 href='mailto:sponsor@pearlhacks.com'>sponsor@pearlhacks.com</a>. 
                         </p>
                     </div>
-                    <div class='bg-white shadow-sm rounded p-2 m-2'>
+                    <div class='bg-white shadow-sm rounded my-2 my-md-0 p-2 mx-2'>
                         <h2 class='h5 text-uppercase font-weight-bold'>Explore Past projects</h2>
                         <p>Check out projects and prizes from previous years of Pearl Hacks on our <a href='https://pearlhacks2020.devpost.com/' target='new'>Devpost</a>.</p>
                     </div>

@@ -22,6 +22,7 @@
     --light2: #c7f0c3;
     --light2_transparent: #c7f0c37a;
     --bright: #37a05d;
+    --bright_shade1: #287444;
     --bright_transparent: #37a05d70;
     --bright2: #d86c91;
     --bright2_transparent: #d86c926b;
@@ -73,9 +74,9 @@ a:hover {
 }
 
 .btn:hover {
-    background-color: var(--dark2);
+    background-color: var(--bright_shade1);
     color: white;
-    border-color: var(--dark2);
+    border-color: var(--bright_shade1);
 }
 
 .btn-outline {
@@ -92,20 +93,18 @@ a:hover {
     border-color: var(--dark);
 }
 
-.jumbotron, main > header {
-    /* background: linear-gradient(-45deg, var(--light), var(--light2)); */
-	/* background-size: 400% 400%; */
-    /* animation: gradient 25s ease infinite; */
-    margin-top: -60px !important;
-    padding-top: 60px !important;
-    /* background: url('images/jumbotron-pattern.jpg'); */
-    background-size: contain;
+.jumbotron {
+    padding: 1px 3px !important;
+
+}
+.jumbotron h1 {
+    color: var(--bright2);
 }
 
 .jumbotron .row {
     min-height: 80vh;
     border-radius: 1rem;
-    background: linear-gradient(-45deg, var(--light_transparent), var(--light));
+    background: linear-gradient(-45deg, var(--dark), var(--dark2));
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
@@ -119,7 +118,11 @@ a:hover {
 	}
 	100% {
 		background-position: 0% 50%;
-	}
+    }
+}
+
+canvas, .pixie-container {
+    border-radius: 1rem;
 }
 
 /* MAIN */
@@ -130,13 +133,16 @@ main {
 
 main > header {
     text-align: center;
-    padding-bottom: 1.5rem;
-    padding-top: 5.5rem !important;
     background-color: var(--light2_transparent);
 }
 
 main > header > h1 {
     color: var(--bright);
+}
+
+.raise {
+    position: relative;
+    z-index: 11;
 }
 
 .display-4 {
@@ -145,7 +151,7 @@ main > header > h1 {
 
 }
 
-h1.lead {
+h2.lead {
     font-family: "Dancing Script", cursive;
 }
 
@@ -153,8 +159,12 @@ h1.lead {
     font-size: medium;
 }
 
-.bg-primary {
-    background-color: var(--bright2) !important;
+.bg-dark {
+    background-color: var(--dark2) !important;
+    color: var(--light2) !important;
+}
+
+.bg-dark p {
     color: white !important;
 }
 
@@ -368,3 +378,24 @@ footer a:hover {
     height: 100px;
     background-color: white !important;
 }
+
+.pixie-container {
+    overflow:hidden;
+    position:relative;
+    height: 100%;
+    width: 100%;
+    /* background:-o-linear-gradient(top, #000, #257eb7); */
+      /* background:-ms-linear-gradient(top, #000, #257eb7); */
+      /* background:-moz-linear-gradient(top, #000, #257eb7); */
+      /* background:-webkit-linear-gradient(top, #000, var(--dark2)); */
+       /* background:linear-gradient(top, #000, var(--dark2));	    */
+        /* filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#040429', EndColorStr='#257eb7'); */
+      /* -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#040429', EndColorStr='#257eb7')"; */
+  }
+  
+  #pixie {
+    z-index:10;
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+  }
