@@ -39,6 +39,4 @@ $(document).ready(function () {
             });
         });
     });
-    
-
 });

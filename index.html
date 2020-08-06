@@ -49,94 +49,14 @@
         var scroll_pos = 0;
             $(document).scroll(function() {
                 scroll_pos = $(this).scrollTop();
-                if(scroll_pos > 100) {
+                if(scroll_pos > 50) {
                     $('.navbar').css('box-shadow', '0px 2px 3px rgb(0,0,0,.3)');
                 } else {
                     $('.navbar').css('box-shadow', 'none');
                 }
             });
-
-            var WIDTH;
-var HEIGHT;
-var canvas;
-var con;
-var g;
-var pxs = new Array();
-var rint = 50;
-
-$(document).ready(function(){
-  WIDTH = window.innerWidth;
-  HEIGHT = window.innerHeight;
-	$('#container').width(WIDTH).height(HEIGHT);
-	canvas = document.getElementById('pixie');
-	$(canvas).attr('width', WIDTH).attr('height',HEIGHT);
-	con = canvas.getContext('2d');
-	for(var i = 0; i < 50; i++) {
-		pxs[i] = new Circle();
-		pxs[i].reset();
-	}
-	setInterval(draw,rint);
-	setInterval(draw,rint2);
-
-});
-
-function draw() {
-	con.clearRect(0,0,WIDTH,HEIGHT);
-	for(var i = 0; i < pxs.length; i++) {
-		pxs[i].fade();
-		pxs[i].move();
-		pxs[i].draw();
-	}
-}
-
-function Circle() {
-	this.s = {ttl:8000, xmax:5, ymax:2, rmax:10, rt:1, xdef:960, ydef:540, xdrift:4, ydrift: 4, random:true, blink:true};
-
-	this.reset = function() {
-		this.x = (this.s.random ? WIDTH*Math.random() : this.s.xdef);
-		this.y = (this.s.random ? HEIGHT*Math.random() : this.s.ydef);
-		this.r = ((this.s.rmax-1)*Math.random()) + 1;
-		this.dx = (Math.random()*this.s.xmax) * (Math.random() < .5 ? -1 : 1);
-		this.dy = (Math.random()*this.s.ymax) * (Math.random() < .5 ? -1 : 1);
-		this.hl = (this.s.ttl/rint)*(this.r/this.s.rmax);
-		this.rt = Math.random()*this.hl;
-		this.s.rt = Math.random()+1;
-		this.stop = Math.random()*.2+.4;
-		this.s.xdrift *= Math.random() * (Math.random() < .5 ? -1 : 1);
-		this.s.ydrift *= Math.random() * (Math.random() < .5 ? -1 : 1);
-	}
-
-	this.fade = function() {
-		this.rt += this.s.rt;
-	}
-
-	this.draw = function() {
-		if(this.s.blink && (this.rt <= 0 || this.rt >= this.hl)) this.s.rt = this.s.rt*-1;
-		else if(this.rt >= this.hl) this.reset();
-		var newo = 1-(this.rt/this.hl);
-		con.beginPath();
-		con.arc(this.x,this.y,this.r,0,Math.PI*2,true);
-		con.closePath();
-		var cr = this.r*newo;
-		g = con.createRadialGradient(this.x,this.y,0,this.x,this.y,(cr <= 0 ? 1 : cr));
-		g.addColorStop(0.0, 'rgba(238,180,28,'+newo+')');
-		g.addColorStop(this.stop, 'rgba(238,180,28,'+(newo*.2)+')');
-		g.addColorStop(1.0, 'rgba(238,180,28,0)');
-		con.fillStyle = g;
-		con.fill();
-	}
-
-	this.move = function() {
-		this.x += (this.rt/this.hl)*this.dx;
-		this.y += (this.rt/this.hl)*this.dy;
-		if(this.x > WIDTH || this.x < 0) this.dx *= -1;
-		if(this.y > HEIGHT || this.y < 0) this.dy *= -1;
-	}
-
-	this.getX = function() { return this.x; }
-	this.getY = function() { return this.y; }
-}
     </script>
+    <script src='scripts/fireflies.js'></script>
     <script src='scripts/sheetsToJSON.js'></script>
     <script src='scripts/sponsors.js'></script>
     <title>Pearl Hacks</title>
@@ -147,8 +67,8 @@ function Circle() {
     <main>
         <!-- JUMBOTRON -->
         <div class='jumbotron p-md-0 p-md-5 bg-white'>
-            <div class='pt-0 px-md-4 pixie-container'>
-                <canvas class='m-0 p-0' id="pixie"></canvas>
+            <div class='pt-0 px-md-4 fireflies-container'>
+                <canvas class='m-0 p-0' id="fireflies"></canvas>
                 <div class='row px-md-5 d-flex align-content-center'>
                     <div class='col-12 col-lg-7 d-flex flex-column justify-content-center align-items-md-start align-items-center'>
                         <h2 class='lead pb-0 mb-0 text-white'>grow with</h2>
@@ -156,7 +76,7 @@ function Circle() {
                         <h4 class='text-white'>Spring 2021</h4>
                         <h4 class='text-white'>UNC Chapel Hill</h4>
                         <p class='pt-3 raise'>
-                            <a class='btn' href='#' role='button'>Go to Interest Form</a>
+                            <a class='btn' href='https://docs.google.com/forms/d/e/1FAIpQLSdLm5R0lk6XKMO2pq_OcwP2lLtrWkrp5H58ohLiOtgNt5Y_Yw/viewform' target='new' role='button'>Go to Interest Form</a>
                         </p>
                     </div>
                     <div class='col-12 col-lg-5'>
@@ -168,8 +88,8 @@ function Circle() {
 
         <!-- HOME PAGE STUFF -->
         <div class='bg-dark'>
-            <div class='container py-5 pixie-container'>
-                <canvas id="pixie"></canvas>
+            <div class='container py-5 fireflies-container'>
+                <canvas id="fireflies"></canvas>
                 <h2 class='overline text-center text-uppercase'>Who are we?</h2>
                 <p class='lead text-center'>
                     Pearl Hacks is an annual hackathon for female and non-binary students at UNC
