@@ -7,7 +7,7 @@ function buildHTMLString(data, target) {
             col1 += `
             <div class='rounded collapse-wrapper mb-2'>
                 <h3 class='mt-lg-2 font-weight-bold collapser collapsed' data-toggle="collapse" aria-expanded="false" data-target="#${target}${i}">${question['Question']}</h3>
-                <div class="collapse pb-2 pr-2" id="${target}${i}">${question['Answer']}</div>
+                <div class="collapse py-2 pr-2" id="${target}${i}">${question['Answer']}</div>
             </div>`
         }
 
@@ -15,7 +15,7 @@ function buildHTMLString(data, target) {
             col2 += `
             <div class='rounded collapse-wrapper mb-2'>
                 <h3 class='mt-lg-2 font-weight-bold collapser collapsed' data-toggle="collapse" aria-expanded="false" data-target="#${target}${i}">${question['Question']}</h3>
-                <div class="collapse pb-2 pr-2" id="${target}${i}">${question['Answer']}</div>
+                <div class="collapse py-2 pr-2" id="${target}${i}">${question['Answer']}</div>
             </div>`
         }
     });

@@ -70,8 +70,8 @@ a:hover {
 /* BUTTONS */
 .btn {
     border-radius: 3rem;
-    color: white;
-    background-color: var(--bright);
+    color: var(--dark2);
+    background-color: var(--light);
     padding: .5rem 1.5rem;
 }
 
@@ -80,7 +80,6 @@ a:hover {
     color: white;
     border-color: var(--bright_shade1);
 }
-
 
 /* HOME PAGE JUMBOTRON */
 .jumbotron {
@@ -94,9 +93,16 @@ a:hover {
 .jumbotron .row {
     min-height: 80vh;
     border-radius: 1rem;
-    background: linear-gradient(-45deg, var(--bright_shade1), var(--dark2));
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    background: linear-gradient(-45deg,var(--bright), var(--dark2), rgb(10, 32, 13));
+    /* background-size: 400% 400%; */
+    /* animation: gradient 15s ease infinite; */
+}
+
+.mascot {
+    width: 400px;
+    /* max-height: 60vh; */
+    max-height: 400px;
+    max-width: 80vw;
 }
 
 @keyframes gradient {
@@ -155,12 +161,12 @@ h2.lead {
     font-size: medium;
 }
 
-.bg-dark {
+.bg-bright {
     background-color: var(--bright2) !important;
     color: var(--light2) !important;
 }
 
-.bg-dark p {
+.bg-bright p {
     color: white !important;
 }
 
@@ -262,8 +268,8 @@ h2.lead {
 
 /* HEADSHOT */
 .headshot {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     display: flex;
     justify-content: center;
     flex-direction: column;

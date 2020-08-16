@@ -4,7 +4,7 @@ let canvas;
 let context;
 let gradient;
 let fireflies = new Array();
-let rint = 50;
+let rint = 60;
 
 $(document).ready(function(){
   WIDTH = $('.fireflies-container').width();
@@ -12,7 +12,7 @@ $(document).ready(function(){
 	canvas = document.getElementById('fireflies');
 	$(canvas).attr('width', WIDTH).attr('height',HEIGHT);
 	context = canvas.getContext('2d');
-	for(let i = 0; i < 50; i++) {
+	for(let i = 0; i < rint; i++) {
 		fireflies[i] = new Circle();
 		fireflies[i].reset();
 	}
