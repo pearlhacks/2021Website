@@ -70,8 +70,8 @@ a:hover {
 /* BUTTONS */
 .btn {
     border-radius: 3rem;
-    color: var(--dark2);
-    background-color: var(--light);
+    color: white;
+    background-color: var(--bright);
     padding: .5rem 1.5rem;
 }
 
@@ -79,6 +79,20 @@ a:hover {
     background-color: var(--bright_shade1);
     color: white;
     border-color: var(--bright_shade1);
+}
+
+.btn-outline {
+    border-radius: 3rem;
+    border: 1px solid var(--light);
+    background-color: transparent;
+    padding: .5rem 1.5rem;
+}
+
+.btn-outline:hover {
+    border-radius: 3rem;
+    border: 1px solid var(--light);
+    background-color: var(--light_transparent);
+    padding: .5rem 1.5rem;
 }
 
 /* HOME PAGE JUMBOTRON */
