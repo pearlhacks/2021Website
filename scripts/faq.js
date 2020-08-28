@@ -6,7 +6,7 @@ function buildHTMLString(data, target) {
         if (i < data.length / 2) {
             col1 += `
             <div class='rounded collapse-wrapper mb-2'>
-                <h3 class='mt-lg-2 font-weight-bold collapser collapsed' data-toggle="collapse" aria-expanded="false" data-target="#${target}${i}">${question['Question']}</h3>
+                <h3 class='m-0 font-weight-bold collapser collapsed' data-toggle="collapse" aria-expanded="false" data-target="#${target}${i}">${question['Question']}</h3>
                 <div class="collapse py-2 pr-2" id="${target}${i}">${question['Answer']}</div>
             </div>`
         }
@@ -14,7 +14,7 @@ function buildHTMLString(data, target) {
         else {
             col2 += `
             <div class='rounded collapse-wrapper mb-2'>
-                <h3 class='mt-lg-2 font-weight-bold collapser collapsed' data-toggle="collapse" aria-expanded="false" data-target="#${target}${i}">${question['Question']}</h3>
+                <h3 class='m-0 font-weight-bold collapser collapsed' data-toggle="collapse" aria-expanded="false" data-target="#${target}${i}">${question['Question']}</h3>
                 <div class="collapse py-2 pr-2" id="${target}${i}">${question['Answer']}</div>
             </div>`
         }

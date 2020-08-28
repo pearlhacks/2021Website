@@ -42,9 +42,10 @@
 
     <!-- Custom Scripts -->
     <script>
-        $(document).ready(function () {
+       $(document).ready(function () {
             $('body>footer').load('./components/footer.html');
             $('body>header').load('./components/navbar.html');
+            
             var scroll_pos = 0;
             $(document).scroll(function() {
                 scroll_pos = $(this).scrollTop();
@@ -56,7 +57,6 @@
             });
         });
     </script>
-
     <title>Pearl Hacks</title>
 </head>
 
@@ -65,17 +65,56 @@
 
     </header>
     <main>
-        <header class='py-4'><h1 class='pt-2'>Transportation</h1></header>
+        <header class='py-4'><h1 class='pt-2'>Style Guide</h1></header>
         <div class='container py-5'>
-            <h2>Coming Soon</h2>
-            <!-- <h2>Bus</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus accusantium, ab dolore tempora reprehenderit aliquid architecto sed voluptatem sunt, mollitia quasi at nesciunt tenetur corrupti exercitationem obcaecati neque natus fugit.</p>
-            <h2 class='pt-5'>Carpool</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, suscipit labore totam dolorem iure voluptatum tempore exercitationem? Facilis corrupti laborum eum itaque perferendis excepturi similique beatae, ab expedita enim dolor!</p>
-            <h2 class='pt-5'>Parking</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, quod aliquam? Nisi quia magnam, nihil quae iste magni perferendis. Placeat totam cum in et voluptas cumque aperiam voluptates, pariatur atque.</p>
-            <h2 class='pt-5'>Other</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eius voluptas quasi nesciunt sed error consectetur quas facere facilis? Itaque velit sit nemo ipsa porro vero necessitatibus, architecto non minima.</p> -->
+            <h2>Typography</h2>
+            <div>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+                <p>Body 1</p>
+            </div>
+
+            <h2 class='mt-5'>Colors</h2>
+            <ul>
+                <li style='background-color: #fbccd46b;'>#fbccd46b</li>
+                <li style='background-color: #fbccd4;'>#fbccd4</li>
+            </ul>
+
+            <ul>
+                <li style='background-color: #c7f0c37a;'>#c7f0c37a</li>
+                <li style='background-color: #c7f0c3;'>#c7f0c3</li>
+            </ul>
+
+            <ul>
+                <li style='background-color: #37a05d70;'>#37a05d70</li>
+                <li style='background-color: #37a05d;'>#37a05d</li>
+                <li style='background-color: #287444;'>#287444</li>
+            </ul>
+
+            <ul>
+                <li style='background-color: #d86c926b;'>#d86c926b</li>
+                <li style='background-color: #d86c91;'>#d86c91</li>
+            </ul>
+
+            <ul>
+                <li style='background-color: #2846396c;'>#2846396c</li>
+                <li style='background-color: #284639;'>#284639</li>
+            </ul>
+            <div>
+            </div>
+            <h2>Components</h2>
+            <div>
+                <a>Link</a>
+                <button class='btn'>Button</button>
+                <button class='btn btn-outline'>Outlined Button</button>
+            </div>
+            <h2 class='mt-5'>Graphics</h2>
+            <div>
+            </div>
         </div>
     </main>
     <footer>

@@ -70,20 +70,21 @@ a:hover {
 /* BUTTONS */
 .btn {
     border-radius: 3rem;
-    color: white;
-    background-color: var(--bright);
+    color: var(--dark2);
+    background-color: var(--light);
     padding: .5rem 1.5rem;
 }
 
 .btn:hover {
-    background-color: var(--bright_shade1);
-    color: white;
-    border-color: var(--bright_shade1);
+    background-color: var(--bright2);
+    color: var(--dark2);
+    border-color: var(--bright2);
 }
 
 .btn-outline {
     border-radius: 3rem;
     border: 1px solid var(--light);
+    color: white;
     background-color: transparent;
     padding: .5rem 1.5rem;
 }
@@ -91,6 +92,7 @@ a:hover {
 .btn-outline:hover {
     border-radius: 3rem;
     border: 1px solid var(--light);
+    color: white;
     background-color: var(--light_transparent);
     padding: .5rem 1.5rem;
 }
@@ -105,16 +107,15 @@ a:hover {
 }
 
 .jumbotron .row {
-    min-height: 80vh;
+    min-height: 85vh;
     border-radius: 1rem;
     background: linear-gradient(-45deg,var(--bright), var(--dark2), rgb(10, 32, 13));
-    /* background-size: 400% 400%; */
-    /* animation: gradient 15s ease infinite; */
+    background-image: url("/assets/images/Artboard_1.svg");
+    background-size: cover;
 }
 
 .mascot {
     width: 400px;
-    /* max-height: 60vh; */
     max-height: 400px;
     max-width: 80vw;
 }
@@ -131,6 +132,56 @@ a:hover {
     }
 }
 
+#header-top {
+    background-image: url('images/header-top.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: repeat-x ;
+    width: 100%;
+    height: 35px;
+    background-color: white !important;
+}
+
+#header-bottom {
+    background-image: url('images/header-bottom.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: repeat-x ;
+    width: 100%;
+    height: 35px;
+    background-color: white !important;
+}
+
+#wave-bottom {
+    background-image: url('images/wave-bottom.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: repeat-x ;
+    width: 100%;
+    height: 100px;
+    background-color: white !important;
+}
+
+#wave-top {
+    background-image: url('images/wave-top.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: repeat-x ;
+    width: 100%;
+    height: 100px;
+    background-color: white !important;
+}
+
+#wave-bottom {
+    background-image: url('images/wave-bottom.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: repeat-x ;
+    width: 100%;
+    height: 100px;
+    background-color: white !important;
+}
+
 /* MAIN */
 main {
     min-height: 100vh;
@@ -139,14 +190,11 @@ main {
 
 main > header {
     text-align: center;
-    background: linear-gradient(-45deg, var(--light2), var(--light2_transparent));
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    padding-top: 30px !important;
+    background-color: var(--bright_shade1);
 }
 
 main > header > h1 {
-    color: var(--bright2);
+    color: var(--light2);
 }
 
 main h1,
@@ -176,7 +224,7 @@ h2.lead {
 }
 
 .bg-bright {
-    background-color: var(--bright2) !important;
+    background-color: var(--bright_shade1) !important;
     color: var(--light2) !important;
 }
 
@@ -263,7 +311,6 @@ h2.lead {
 /* TABLES */
 .table {
     max-width: 900px;
-    /* box-shadow: 0px 1px 3px var(--bright2_transparent); */
     border: 1px solid var(--light);
 }
 
