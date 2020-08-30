@@ -110,7 +110,7 @@ a:hover {
     min-height: 85vh;
     border-radius: 1rem;
     background: linear-gradient(-45deg,var(--bright), var(--dark2), rgb(10, 32, 13));
-    background-image: url("/assets/images/Artboard_1.svg");
+    background-image: url("images/Artboard_1.svg");
     background-size: cover;
 }
 
