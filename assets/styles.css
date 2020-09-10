@@ -47,10 +47,7 @@
 /* TOP-LEVEL STYLES */
 * {
     font-family: 'Proxima Nova';
-}
-
-p {
-    color: var(--dark2);
+    color: var(--dark2) !important;
 }
 
 .container {
@@ -58,11 +55,11 @@ p {
 }
 
 /* LINKS */
-a {
-    color: var(--bright2)
+main a {
+    color: var(--bright2) !important;
 }
 
-a:hover {
+main a:hover {
     text-decoration: none;
     color: var(--bright2_transparent);
 }
@@ -70,21 +67,20 @@ a:hover {
 /* BUTTONS */
 .btn {
     border-radius: 3rem;
-    color: var(--dark2);
     background-color: var(--light);
+    color: var(--dark2) !important;
     padding: .5rem 1.5rem;
 }
 
 .btn:hover {
     background-color: var(--bright2);
-    color: var(--dark2);
     border-color: var(--bright2);
 }
 
 .btn-outline {
     border-radius: 3rem;
     border: 1px solid var(--light);
-    color: white;
+    color: white !important;
     background-color: transparent;
     padding: .5rem 1.5rem;
 }
@@ -98,20 +94,32 @@ a:hover {
 }
 
 /* HOME PAGE JUMBOTRON */
-.jumbotron {
-    padding: 1px 3px !important;
-}
-
 .jumbotron h1 {
-    color: var(--bright2);
+    color: var(--light) !important;
 }
 
 .jumbotron .row {
-    min-height: 85vh;
-    border-radius: 1rem;
+    min-height: 100vh;
     background: linear-gradient(-45deg,var(--bright), var(--dark2), rgb(10, 32, 13));
     background-image: url("images/Artboard_1.svg");
     background-size: cover;
+}
+
+
+/* FIREFLIES */
+.fireflies-container {
+    overflow:hidden;
+    position:relative;
+    top: 0; 
+    left: 0;
+    height: 100%;
+}
+  
+#fireflies {
+    z-index:10;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .mascot {
@@ -130,6 +138,12 @@ a:hover {
 	100% {
 		background-position: 0% 50%;
     }
+}
+
+i.rounded-circle {
+    width: 60px;
+    height: 60px;
+    color: var(--bright) !important;
 }
 
 #header-top {
@@ -182,6 +196,12 @@ a:hover {
     background-color: white !important;
 }
 
+.circuit {
+    background-image: url('images/circuit-board.svg');
+    background-repeat: repeat;
+    background-size: 75%;
+}
+
 /* MAIN */
 main {
     min-height: 100vh;
@@ -194,12 +214,15 @@ main > header {
 }
 
 main > header > h1 {
-    color: var(--light2);
+    color: var(--light2) !important;
 }
 
-main h1,
-main h2 {
+main h1 {
     font-family: 'Caviar Dreams';
+    font-weight: bold;
+}
+
+h2 {
     font-weight: bold;
 }
 
@@ -225,6 +248,9 @@ h2.lead {
 
 .bg-bright {
     background-color: var(--bright_shade1) !important;
+}
+
+.bg-bright h2 {
     color: var(--light2) !important;
 }
 
@@ -233,7 +259,11 @@ h2.lead {
 }
 
 .bg-light {
-    background-color: var(--light2_transparent) !important;
+    background-color: var(--light2) !important;
+}
+
+.bg-light h2 {
+    color: var(--bright) !important;
 }
 
 /* SPONSORS */
@@ -272,7 +302,7 @@ h2.lead {
 }
 
 .collapser {
-    color: var(--bright2);
+    color: var(--bright2) !important;
     font-size: 1.25rem;
     padding: 1rem 0rem;
     padding-left: 1rem;
@@ -290,7 +320,6 @@ h2.lead {
 }
 
 .collapse-wrapper .collapsed {
-    /* border-bottom: 1px solid var(--light); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -345,9 +374,6 @@ h2.lead {
     background-color: white;
 }
 
-.navbar-nav a {
-    color: var(--dark2) !important;
-}
 .navbar-nav a:hover {
     color: var(--bright2) !important;
 }
@@ -355,12 +381,10 @@ h2.lead {
 .navbar-brand span,
 .navbar-brand b {
     font-family: var(--secondary-font) !important;
-    color: var(--dark2);
 }
 
 .navbar-toggler {
     border: none;
-    color: var(--dark2);
 }
 
 .navbar-toggler:after {
@@ -415,16 +439,17 @@ footer h2 {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: bold;
-    color: var(--light2);
+    color: var(--light2) !important;
 }
 
 footer a {
-    color: var(--light);
+    color: var(--light) !important;
 }
 
 footer a:hover {
-    color: var(--light_transparent);
+    color: var(--light_transparent) !important;
     transition: ease-in all;
+    text-decoration: none;
 }
 
 #footer-border {
@@ -435,24 +460,4 @@ footer a:hover {
     width: 100%;
     height: 100px;
     background-color: white !important;
-}
-
-/* FIREFLIES */
-canvas, .fireflies-container {
-    border-radius: 1rem;
-}
-
-.fireflies-container {
-    overflow:hidden;
-    position:relative;
-    top: 0; 
-    left: 0;
-    height: 100%;
-}
-  
-#fireflies {
-    z-index:10;
-    position: absolute;
-    top: 0;
-    left: 0;
 }

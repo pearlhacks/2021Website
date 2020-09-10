@@ -4,7 +4,7 @@ let canvas;
 let context;
 let gradient;
 let fireflies = new Array();
-let rint = 60;
+let rint = 50;
 
 $(document).ready(function(){
   WIDTH = $('.fireflies-container').width();
