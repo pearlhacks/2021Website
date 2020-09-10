@@ -105,6 +105,11 @@ main a:hover {
     background-size: cover;
 }
 
+.mascot {
+    width: 400px;
+    max-height: 400px;
+    max-width: 80vw;
+}
 
 /* FIREFLIES */
 .fireflies-container {
@@ -122,30 +127,17 @@ main a:hover {
     left: 0;
 }
 
-.mascot {
-    width: 400px;
-    max-height: 400px;
-    max-width: 80vw;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-    }
-}
-
 i.rounded-circle {
     width: 60px;
     height: 60px;
     color: var(--bright) !important;
 }
 
+.side-graphic {
+    max-height: 250px !important;
+}
+
+/* BACKGROUND DECORATION */
 #header-top {
     background-image: url('images/header-top.png');
     background-position: bottom;
