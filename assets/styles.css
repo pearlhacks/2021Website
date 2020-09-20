@@ -169,7 +169,7 @@ i.rounded-circle {
 }
 
 #wave-top {
-    background-image: url('images/wave-top.png');
+    background-image: url('images/wave-top-dark.png');
     background-position: bottom;
     background-size: contain;
     background-repeat: repeat-x ;
