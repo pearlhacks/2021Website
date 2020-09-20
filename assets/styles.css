@@ -224,6 +224,15 @@ h2 {
     z-index: 11;
 }
 
+.rounded {
+    border-radius: .75rem !important;
+}
+
+.rounded-top {
+    border-top-left-radius: .75rem !important;
+    border-top-right-radius: .75rem !important;
+}
+
 .display-4 {
     font-weight: bold;
     letter-spacing: .5rem;
@@ -251,7 +260,7 @@ h2.lead {
 }
 
 .bg-light {
-    background-color: var(--light2) !important;
+    background-color: var(--light2_transparent) !important;
 }
 
 .bg-light h2 {
@@ -290,11 +299,11 @@ h2.lead {
 }
 
 .collapse-wrapper {
-    border: 1px solid var(--light);
+    border: 1px solid var(--light2);
 }
 
 .collapser {
-    color: var(--bright2) !important;
+    color: var(--bright) !important;
     font-size: 1.25rem;
     padding: 1rem 0rem;
     padding-left: 1rem;
@@ -326,17 +335,17 @@ h2.lead {
 
 .collapser + div {
     padding-left: 1rem;
-    border-top: 1px solid var(--light);
+    border-top: 1px solid var(--light2);
 }
 
 /* TABLES */
 .table {
     max-width: 900px;
-    border: 1px solid var(--light);
+    border: 1px solid var(--light2);
 }
 
 .table .row {
-    border-bottom: 1px solid var(--light);
+    border-bottom: 1px solid var(--light2);
 }
 
 .table .row:last-of-type {
@@ -344,7 +353,7 @@ h2.lead {
 }
 
 .table .th {
-    background-color: var(--light) !important;
+    background-color: var(--light2_transparent) !important;
     color: var(--bright2);
 }
 
