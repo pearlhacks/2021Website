@@ -21,7 +21,7 @@
     --light_transparent: #fbccd46b;
     --light2: #c7f0c3;
     --light2_transparent: #c7f0c37a;
-    --bright: #37a05d;
+    --bright: rgb(62, 163, 129);
     --bright_shade1: #287444;
     --bright_transparent: #37a05d70;
     --bright2: #d86c91;
@@ -79,17 +79,17 @@ main a:hover {
 
 .btn-outline {
     border-radius: 3rem;
-    border: 1px solid var(--light);
+    border: 1px solid var(--bright2);
     color: white !important;
-    background-color: transparent;
+    background-color: var(--bright2);
     padding: .5rem 1.5rem;
 }
 
 .btn-outline:hover {
     border-radius: 3rem;
-    border: 1px solid var(--light);
+    border: 1px solid var(--bright2);
     color: white;
-    background-color: var(--light_transparent);
+    background-color: var(--bright2_transparent);
     padding: .5rem 1.5rem;
 }
 
@@ -134,7 +134,7 @@ i.rounded-circle {
 }
 
 .side-graphic {
-    max-height: 250px !important;
+    height: 250px;
 }
 
 /* BACKGROUND DECORATION */
@@ -169,7 +169,7 @@ i.rounded-circle {
 }
 
 #wave-top {
-    background-image: url('images/wave-top-dark.png');
+    background-image: url('images/wave-top-light.png');
     background-position: bottom;
     background-size: contain;
     background-repeat: repeat-x ;
@@ -179,7 +179,7 @@ i.rounded-circle {
 }
 
 #wave-bottom {
-    background-image: url('images/wave-bottom.png');
+    background-image: url('images/wave-bottom-light.png');
     background-position: bottom;
     background-size: contain;
     background-repeat: repeat-x ;
@@ -247,8 +247,16 @@ h2.lead {
     font-size: medium;
 }
 
+.bg-dark {
+    background-color: var(--dark2) !important;
+}
+
 .bg-bright {
-    background-color: var(--bright_shade1) !important;
+    background-color: var(--bright) !important;
+}
+
+.bg-bright a {
+    color: var(--light) !important;
 }
 
 .bg-bright h2 {
@@ -263,8 +271,16 @@ h2.lead {
     background-color: var(--light2_transparent) !important;
 }
 
+i.bg-light {
+    background-color: var(--light2) !important;
+}
+
 .bg-light h2 {
     color: var(--bright) !important;
+}
+
+.bg-light2 {
+    background-color: var(--light);
 }
 
 /* SPONSORS */
