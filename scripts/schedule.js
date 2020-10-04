@@ -1,4 +1,4 @@
-function buildHTMLString(data, header) {
+function buildScheduleTable(data, header) {
     let html = "<div class='table mt-4 rounded'>";
     html += `<div class='rounded-top row mx-0 text-center font-weight-bold th py-2 text-uppercase'>
                 <div class='col-12'>  
@@ -28,13 +28,13 @@ $(document).ready(function () {
     // Friday
     let schedule = "";
     fetchData('1Dgw8Iu_UupbrTwnYgy-MAAeHTHQgcgYhgHa93wQk2M4', '1').then((data) => {
-        schedule += buildHTMLString(data, "Friday");
+        schedule += buildScheduleTable(data.filter(item => item != null), "Friday");
         // Saturday
         fetchData('1Dgw8Iu_UupbrTwnYgy-MAAeHTHQgcgYhgHa93wQk2M4', '2').then((data) => {
-            schedule += buildHTMLString(data, "Saturday");
+            schedule += buildScheduleTable(data.filter(item => item != null), "Saturday");
             // Sunday
             fetchData('1Dgw8Iu_UupbrTwnYgy-MAAeHTHQgcgYhgHa93wQk2M4', '3').then((data) => {
-                schedule += buildHTMLString(data, "Sunday");
+                schedule += buildScheduleTable(data.filter(item => item != null), "Sunday");
                 document.getElementById("schedule").innerHTML = schedule;
             });
         });
