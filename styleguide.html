@@ -57,6 +57,18 @@
             });
         });
     </script>
+    <style>
+        .colors > div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            margin-right: .5rem;
+        }
+    </style>
     <title>Pearl Hacks</title>
 </head>
 
@@ -65,51 +77,38 @@
 
     </header>
     <main>
-        <header class='py-4'><h1 class='pt-2'>Style Guide</h1></header>
-        <div class='container py-5'>
+        <div id='header-top'>
+        </div>
+        <header class='py-0 m-0'><h1 class='py-3 m-0'>Style Guide</h1>
+        </header>
+        <div id='header-bottom'>
+        </div>        <div class='container py-5'>
             <h2>Typography</h2>
             <div>
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
-                <p>Body 1</p>
+                <h1>Heading 1 - Caviar Dreams, Bold, 40px </h1>
+                <h2>Heading 2 - Proxima Nova, Bold, 32px</h2>
+                <h3>Heading 3 - Proxima Nova, Normal Weight, 28px</h3>
+                <h4>Heading 4 - Proxima Nova, Normal Weight, 24px</h4>
+                <h5>Heading 5 - Proxima Nova, Normal Weight, 20px</h5>
+                <h6 class="text-uppercase">Heading 6 - Proxima Nova, Normal Weight, 16px, Uppercase</h6>
+                <p>Body 1  - Proxima Nova, Normal Weight, 16px</p>
             </div>
 
             <h2 class='mt-5'>Colors</h2>
-            <ul>
-                <li style='background-color: #fbccd46b;'>#fbccd46b</li>
-                <li style='background-color: #fbccd4;'>#fbccd4</li>
-            </ul>
-
-            <ul>
-                <li style='background-color: #c7f0c37a;'>#c7f0c37a</li>
-                <li style='background-color: #c7f0c3;'>#c7f0c3</li>
-            </ul>
-
-            <ul>
-                <li style='background-color: #37a05d70;'>#37a05d70</li>
-                <li style='background-color: #37a05d;'>#37a05d</li>
-                <li style='background-color: #287444;'>#287444</li>
-            </ul>
-
-            <ul>
-                <li style='background-color: #d86c926b;'>#d86c926b</li>
-                <li style='background-color: #d86c91;'>#d86c91</li>
-            </ul>
-
-            <ul>
-                <li style='background-color: #2846396c;'>#2846396c</li>
-                <li style='background-color: #284639;'>#284639</li>
-            </ul>
+            <div class='colors d-flex'>
+                <div style='background-color: #fbccd4;''>#fbccd4</div>
+                <div style='background-color: #c7f0c3;'>#c7f0c3</div>
+                <div style='background-color: #3ea381;'>#3ea381</div>
+                <div style='background-color: #d86c91;'>#d86c91</div>
+                <div style='background-color: #284639; color: white !important;'>#284639</div> 
+            </div>
+                
             <div>
             </div>
-            <h2>Components</h2>
+            <h2 class="mt-5">Components</h2>
             <div>
-                <a>Link</a>
-                <button class='btn'>Button</button>
+                <a class="mr-1">Link</a>
+                <button class='btn mr-1'>Button</button>
                 <button class='btn btn-outline'>Outlined Button</button>
             </div>
             <h2 class='mt-5'>Graphics</h2>

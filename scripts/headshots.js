@@ -8,6 +8,7 @@ function buildHTMLString(data) {
             <h3 class='m-0'>
             ${director['Name']}
             </h3>
+            <p class="p-0 m-0 text-muted">${director['Pronouns']}</p>
             <span style="width: 200px;">${director['Title']}</span>
         </div>`;
     });

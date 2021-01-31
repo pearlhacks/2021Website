@@ -5,6 +5,7 @@ function buildHTMLString(data) {
     let silver = "<div class='row'>";
     let custom = "<div class='row'>";
     data.forEach((sponsor) => {
+        console.log(sponsor)
         if (sponsor['Sponsor Tier'] === 'Pearl') {
             pearl += 
             `<div class='col-12 col-lg-6 pearl p-3'>
@@ -50,6 +51,6 @@ function buildHTMLString(data) {
 
 $(document).ready(function () {
     fetchData('1biudrolhcYpl1ldsUFrGwR38bS3UaBWApW-ui1x1Gvc', '1').then((data) => {
-        document.getElementById("sponsors").innerHTML = buildHTMLString(data)
+        document.getElementById("sponsors").innerHTML = buildHTMLString(data.filter(item => item))
     });
 });

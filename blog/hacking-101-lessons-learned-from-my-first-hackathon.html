@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-150933241-1'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-150933241-1');
+    </script>
+
+    <!-- Meta Tags-->
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='Cache-control' content='public'>
+    <meta name='description'
+        content='Pearl Hacks is a hackathon for female and non-binary students. We especially cater to first-time hackers who are looking for a supportive environment to explore technology.'>
+    <meta name='google-site-verification' content='BVA1NKpsy9IenrjkPDUVV9naJOgnlX8MpPhV5wT_c0w' />
+
+    <!-- Favicon -->
+    <link rel='icon' href='../assets/images/ph-favicon.png' type='image/png' />
+    <link rel='shortcut icon' href='../assets/images/ph-favicon.png' type='image/png' />
+
+    <!-- CSS (Bootstrap, Custom Styles -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'
+        integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous'>
+    <link rel='stylesheet' href='../assets/styles.css'>
+
+    <!-- Bootstrap Script Requirements (Slim JQuery, Popper, Bootstrap, Font Awesome) -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'>
+    </script>
+    <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'
+        integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous'>
+    </script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'
+        integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous'>
+    </script>
+    <script src='https://kit.fontawesome.com/54e7e1ecc6.js' crossorigin='anonymous'></script>
+
+    <!-- Custom Scripts -->
+    <script>
+        $(document).ready(function () {
+            $('body>footer').load('../components/footer.html');
+            $('body>header').load('../components/navbar.html');
+            var scroll_pos = 0;
+            $(document).scroll(function () {
+                scroll_pos = $(this).scrollTop();
+                if (scroll_pos > 100) {
+                    $('.navbar').css('box-shadow', '0px 2px 3px rgb(0,0,0,.15)');
+                } else {
+                    $('.navbar').css('box-shadow', 'none');
+                }
+            });
+        });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone.min.js'></script>
+    <script
+        src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone-with-data-2012-2022.min.js'>
+    </script>
+    <script src='scripts/sheetsToJSON.js'></script>
+    <!-- <script src='scripts/workshops.js'></script> -->
+    <title>Pearl Hacks</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div id='header-top'>
+        </div>
+        <header class='py-0 m-0'>
+            <h1 class='py-3 m-0'>Blog</h1>
+        </header>
+        <div id='header-bottom'>
+        </div>
+        </header>
+        <div class='container'>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white pl-0 ml-0">
+                    <li class="breadcrumb-item"><a href="/blog/index.html">Blog</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Hacking 101 — Lessons Learned from My First
+                        Hackathon</li>
+                </ol>
+            </nav>
+            <p class="text-muted overline text-uppercase mb-0">January 21st, 2021</p>
+
+            <h2>Hacking 101 — Lessons Learned from My First Hackathon</h2>
+            <p class="h5">Advice from reflecting as a 4x hackathon organizer</p>
+            <h5 class="h6">By Lindsay Zhou</h5>
+            <hr>
+
+            <p>I attended HackNC during October of my freshman year — barely two months after I’d written my first line
+                of code in my life. At the time, I didn’t know a thing about hackathons. I persuaded my best friend to
+                sign up with me, but she had something going on in the morning, so I ambled around alone in Venable Hall
+                at UNC, trying to figure out what exactly I was supposed to do.</p>
+            <p>Somehow, I entered a conversation with a group of other freshmen who were equally as confused as I was.
+                We snowballed into a team of seven — eight, once my best friend was able to join us in the afternoon —
+                and decided pretty early on that we were going to say “forget it” to the prizes because we’d be lucky to
+                get a project done at all. It took us half the day to decide what we were going to work on before we
+                settled on a text-based maze game in Java — a language thatonly two out of the eight of us knew because
+                the rest of us were in Intro to Programming at UNC, which was taught in TypeScript at the time.</p>
+            <h3>The Grind</h3>
+            <p>The specifics of what happened after that were a blur as I tried to figure out Java, GitHub, and
+                programming in general. Our maze project was... not the most beautiful project out there, which
+                solidified our “forget it” approach to prizes. We took breaks to go to workshops and, of course, eat the
+                free food that was provided. As night settled in, we relied on sugar from donuts, handfuls of Awake
+                chocolates, and many cups of coffee to stay awake as we continued to plink away at the bugs plaguing our
+                simple maze game.</p>
+            <p>Around 2 or 3 in the morning, my teammates were ready to call it a night, but we had been stuck trying to
+                code in a health (HP) system. Our maze game transformed into a tool for kids to learn math — as the
+                player navigated the maze, monsters popped up at random, and only solving a simple math problem could
+                vanquish the beasts. Answer wrong, and the player would lose health. However, we just couldn’t get the
+                health mechanism to work. In fact, it was somehow crashing the rest of our game.</p>
+            <p>While my team returned to their dorms to sleep, I found myself unable to pull away from the keyboard. I
+                spent the entire night trying to implement the HP system alone in my dorm room. Looking back on it more
+                than two years later, I can’t imagine why it was so complicated, but for freshman me with no coding
+                experience, it was 8 AM by the time I’d gotten it figured out. I sent a text to my team letting them
+                know it’d been fixed, and then I passed out.</p>
+            <p>When I woke up again, it was 11:30 — past the project submission deadline. I ran back to Venable Hall to
+                discover that my team had missed my text and submitted the version without the HP system from when we’d
+                left off the previous night, which used hearts to measure health
+                instead. Oddly enough, I wasn’t even upset. The heart system was more fluid for the gameplay, and I was
+                just glad to have figured it out.</p>
+            <h3>The Demo</h3>
+            <p>When I say this project was ugly, I mean... Rather than updating the maze when the player made a move, it
+                printed a new grid every time. The walls were made of vertical slashes (|) and underscores (_). It
+                wasn’t hosted anywhere — we ran it in Java Eclipse when it was time to demo.We made sarcastic jokes
+                about our project the entire weekend, calling ourselves the “Dream Team” ironically, and subsequently
+                naming our project “Hello, Dream World.” If you want to take a look at exactly what our project was
+                like, here’s the repo. But hey, we demoed nonetheless.</p>
+            <p>We weren’t fooling anyone in thinking it was a prize-worthy project, but we demoed it with the same
+                enthusiasm as any other group, using buzzy marketing words and introducing it as “a gamedesigned to help
+                young children master basic math skills,” even though we knew no child would give our game longer than a
+                glance, the way it looked. We also probably looked silly as an eight-person team when most other teams
+                maxed out at four — the number of prizes that were allotted for each category. Still, we got one really
+                enthusiastic judge that was excited for us for completing a project at all when we were all just
+                starting out! Most importantly, we were happy.</p>
+            <h3>From Hacker to Organizer</h3>
+            <p>HackNC 2018 has been one of my favorite college experiences to date. That semester, I would go on to
+                participate in three more hackathons — HackDuke at Duke University, HackGT at Georgia Tech, and Hack110,
+                which was hosted by my Intro to Programming class. At none of these did I ever seriously compete for
+                prizes. I just showed up for the atmosphere. (Okay, and the free stuff.) Hack110 was a particular
+                personal success for me because I surprised myself with how much I’d actually learned during the
+                semester!</p>
+            <p>I loved the hackathon experience so much that I joined the organizing boards of two hackathons at my
+                university — the Carolina Data Challenge and Pearl Hacks. Since then, I’ve gotten to handle budgets of
+                over $50,000 and reach hundreds of participants across both events.</p>
+            <p>With Pearl Hacks coming up in a
+                month, I’ve been searching for tips to send to participants, many of whom are coming to Pearl Hacks for
+                their first hackathon ever! However, when I Google for hackathon tips, many of the articles are geared
+                towards winning. While winning prizes is a lot of fun, it does not have to be your main focus to have a
+                great time, so here are a few non-technical tips to make the most out of your time at Pearl Hacks!</p>
+            <h3>Know Your Goals</h3>
+            <p>You can get a lot out of your hackathon experience, but there are only 24 hours of
+                hacking, so it’s helpful to know what you want before you get started. You don’t need to have a 10-point
+                plan or anything like that, but answering some broad questions for yourself can help you hit the ground
+                running.</p>
+
+            <h4>Do You Want to Compete for Prizes?</h4>
+            <p>I hate putting this question first because I think hackathons are
+                very valuable whether or not you’re there to compete, and I don’t want it to seem like competing has to
+                be a
+                priority. However, this is one of the first questions to figure out, whether your answer is yes or no!
+            </p>
+            <p>If
+                your primary goal is to compete, that means you’ll probably spend the majority of your time coding,
+                which
+                limits the other events you can participate in. If not, you get a lot more time to attend workshops,
+                network, and join fun events!</p>
+            <p>Don’t worry if your answer changes midway through. There have been plenty of
+                participants in the past who surprised themselves by completing a project, and there have been even more
+                who
+                decided partway through that they just weren’t feeling it. Either way, hackathons are flexible enough to
+                allow a change of plans.</p>
+            <h4>What Do You Want to Learn?</h4>
+            <p>More specifically:
+                <ul>
+                    <li>Are you looking to brush up your
+                        technical skills?</li>
+                    <li>Are you seeking new career opportunities?</li>
+                    <li>Do you just want to see what a hackathon is
+                        like?</li>
+                </ul>
+            </p>
+            <p>These are all valid reasons to go to hackathons!</p>
+            <p>For those looking to improve their technical skills,
+                working on a project is always a great option! Pearl Hacks has technical mentors that can help you out
+                along
+                the way, and programming is one of those things that’s just best learned by doing. However, if projects
+                really aren’t your thing or you don’t have the full weekend to commit, you can also take a look at Pearl
+                Hacks’ technical workshops and see if there are skills that interest you.</p>
+            <p>Hackathons can also help you get
+                your foot in the door while recruiting. Pearl Hacks holds a sponsorship fair where you can interact with
+                representatives from our sponsor companies. You can also say hi to sponsors on the Pearl Hacks Discord
+                via
+                the <b>#chat-with-sponsors</b> channel or go to sponsored workshops. Some sponsors will be doubling as
+                technical
+                mentors too. If you’re planning on participating in a hackathon’s recruiting events, make sure you come
+                prepared with an updated resume and an elevator pitch, and remember to respect the sponsors’ time!</p>
+            <p>If you’re
+                just going to a hackathon for the heck of it, that’s okay too! In that case, you can pick and choose
+                events
+                that are interesting to you. After all, the hackathon organizers are creating the event for you, and
+                they
+                want you to have the experience you want.</p>
+            <h3>Talk to People!</h3>
+            <p>We all know the stereotypical image of a programmer — a man slouched over a laptop in a dark room, typing
+                away. By now, hopefully you’ve realized that this is not what programmers are like, and this is
+                definitely
+                not what hackathons are like!</p>
+            <p>When we could host events in person, one of my favorite parts of being a
+                hackathon director waswandering around the venue, striking up conversations with teams, playing board
+                games
+                with participants, and seeing what awesome projects people were working on. This is coming from a huge
+                introvert. Take breaks when your social battery runs empty, but if you’re feeling up to it, it’s worth a
+                shot to chat up other people!</p>
+            <p>With the online format, it’s a lot harder to initiate conversations, but that
+                doesn’t mean it’s impossible. Pearl Hacks 2021 will use Discord as a communication channel throughout
+                our
+                event, and that’s one way you can ping people who seem interesting! Take some time to check out the
+                <b>#just-chatting channel</b> and spark a conversation. You can also introduce yourself in the <b>#team-building</b>
+                channel if you’re looking for teammates or drop some links in the <b>#networking-channel</b> so people can keep
+                up
+                with you outside of the event. These channels are also great opportunities for you to scope around and
+                see
+                if there’s anybody you want to reach out to!I still keep in touch with some of the members from my first
+                team at HackNC, and it’s always great to see what neat things people go on to do! Meeting people at a
+                hackathon will make your time there a lot more fun and memorable.</p>
+            <h3>Use the Hackathon as a Launching Point</h3>
+            <p>Like
+                most hackathons, Pearl Hacks is only a weekend long, so don’t expect your most polished work to come out of
+                it. If you’re working on a project, focus on the big picture — the problem you’re trying to solve, and how
+                your project addresses it. It’s better to have a rough, complete project than it is to have a polished one
+                that doesn’t work because it’s only half done. It’s also better to have a half-finished project than none at
+                all because you spent the whole time thinking about minute details. You can always build on the fine details
+                later on if you decide to continue pursuing what you worked on, so take the weekend to crank out some
+                code!</p>
+                <p>This advice goes for non-project-related events at hackathons too! You’re not likely to build a lasting
+                    relationship with anyone over one weekend, so follow up with people that you met if you want to stay
+                    connected. 1–2 hour workshops are also not going to turn you into a master of any topic, so continue looking
+                    for resources on your own for any subjects you’re interested in.</p>
+                <p>Pearl Hacks is here to empower you to pursue
+                    technology, but it’s still up to you to do the pursuing!</p>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

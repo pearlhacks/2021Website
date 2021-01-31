@@ -5,6 +5,12 @@
 }
 
 @font-face {
+    font-family: 'Proxima Nova';
+    src: url('fonts/ProximaNova-Black.otf');
+    font-weight: 900;
+}
+
+@font-face {
     font-family: 'Caviar Dreams';
     src: url('fonts/CaviarDreams.ttf');
 }
@@ -18,12 +24,13 @@
 /* VARIABLES & ROOT LEVEL SETTINGS*/
 :root {
     --light: #fbccd4;
+    --light_shade1: #eb9daa;
     --light_transparent: #fbccd46b;
     --light2: #c7f0c3;
     --light2_transparent: #c7f0c37a;
     --bright: rgb(62, 163, 129);
     --bright_shade1: #287444;
-    --bright_transparent: #37a05d70;
+    --bright_transparent: #37a05d4f;
     --bright2: #d86c91;
     --bright2_transparent: #d86c926b;
     --dark: rgb(27, 34, 101);
@@ -56,53 +63,69 @@
 
 /* LINKS */
 main a {
-    color: var(--bright2) !important;
+    color: var(--bright) !important;
 }
 
 main a:hover {
     text-decoration: none;
-    color: var(--bright2_transparent);
+    color: var(--bright_transparent);
 }
 
 /* BUTTONS */
 .btn {
     border-radius: 3rem;
-    background-color: var(--light);
-    color: var(--dark2) !important;
+    background-color: var(--bright);
+    color: white !important;
     padding: .5rem 1.5rem;
 }
 
 .btn:hover {
-    background-color: var(--bright2);
-    border-color: var(--bright2);
+    background-color: var(--bright_shade1);
+    border-color: var(--bright_shade1);
+}
+
+.btn-pink {
+    background-color: var(--light);
+    border-color: var(--light);
+    color: var(--dark2) !important;
+}
+
+.btn-pink:hover {
+    background-color: var(--light_shade1);
+    border-color: var(--light_shade1);
 }
 
 .btn-outline {
     border-radius: 3rem;
-    border: 1px solid var(--bright2);
-    color: white !important;
-    background-color: var(--bright2);
+    border: 1.5px solid var(--light2);
+    color: var(--light2) !important;
+    background-color: transparent;
     padding: .5rem 1.5rem;
 }
 
 .btn-outline:hover {
     border-radius: 3rem;
-    border: 1px solid var(--bright2);
     color: white;
-    background-color: var(--bright2_transparent);
+    border: 1.5px solid var(--light2);
+    background-color: var(--light2_transparent);
     padding: .5rem 1.5rem;
 }
 
 /* HOME PAGE JUMBOTRON */
-.jumbotron h1 {
-    color: var(--light) !important;
-}
-
 .jumbotron .row {
     min-height: 100vh;
     background: linear-gradient(-45deg,var(--bright), var(--dark2), rgb(10, 32, 13));
     background-image: url("images/Artboard_1.svg");
     background-size: cover;
+}
+
+.jumbotron h1 {
+    color: var(--light) !important;
+}
+
+.jumbotron btn {
+    background-color: var(--light) !important;
+    border-color: var(--light) !important;
 }
 
 .mascot {
@@ -130,11 +153,10 @@ main a:hover {
 i.rounded-circle {
     width: 60px;
     height: 60px;
-    color: var(--bright) !important;
 }
 
 .side-graphic {
-    height: 250px;
+    height: 325px;
 }
 
 /* BACKGROUND DECORATION */
@@ -159,27 +181,18 @@ i.rounded-circle {
 }
 
 #wave-bottom {
-    background-image: url('images/wave-bottom.png');
+    /* background-image: url('images/wave-bottom.png'); */
+    background-image: url('images/header-bottom.png');
     background-position: bottom;
     background-size: contain;
     background-repeat: repeat-x ;
     width: 100%;
-    height: 100px;
+    height: 50px;
     background-color: white !important;
 }
 
 #wave-top {
-    background-image: url('images/wave-top-light.png');
-    background-position: bottom;
-    background-size: contain;
-    background-repeat: repeat-x ;
-    width: 100%;
-    height: 100px;
-    background-color: white !important;
-}
-
-#wave-bottom {
-    background-image: url('images/wave-bottom-light.png');
+    background-image: url('images/wave-top-dark.png');
     background-position: bottom;
     background-size: contain;
     background-repeat: repeat-x ;
@@ -236,7 +249,6 @@ h2 {
 .display-4 {
     font-weight: bold;
     letter-spacing: .5rem;
-
 }
 
 h2.lead {
@@ -253,14 +265,11 @@ h2.lead {
 
 .bg-bright {
     background-color: var(--bright) !important;
+    color: white !important;
 }
 
 .bg-bright a {
     color: var(--light) !important;
-}
-
-.bg-bright h2 {
-    color: var(--light2) !important;
 }
 
 .bg-bright p {
@@ -271,8 +280,15 @@ h2.lead {
     background-color: var(--light2_transparent) !important;
 }
 
+.badge.outlined {
+    border: 1px solid var(--bright);
+    color: var(--bright) !important;
+}
+
 i.bg-light {
-    background-color: var(--light2) !important;
+    background-color: transparent !important;
+    border: 1.5px solid var(--bright);
+    color: var(--bright) !important;
 }
 
 .bg-light h2 {
@@ -280,7 +296,7 @@ i.bg-light {
 }
 
 .bg-light2 {
-    background-color: var(--light);
+    background-color: var(--bright_shade1);
 }
 
 .bg-blob {
@@ -318,19 +334,17 @@ i.bg-light {
 
 /* COLLAPSABLE CONTENT */
 .shadow-sm {
-    box-shadow: 0px 1px 3px rgb(0,0,0,.3) !important;
+    box-shadow: 0px 1px 3px rgb(0,0,0,.15) !important;
 }
 
 .collapse-wrapper {
-    border: 1px solid var(--light2);
+    border: 1.5px solid var(--bright);
 }
 
 .collapser {
     color: var(--bright) !important;
-    font-size: 1.25rem;
     padding: 1rem 0rem;
     padding-left: 1rem;
-    font-weight: normal !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -358,26 +372,34 @@ i.bg-light {
 
 .collapser + div {
     padding-left: 1rem;
-    border-top: 1px solid var(--light2);
+    border-top: 1px solid var(--bright_transparent);
 }
 
 /* TABLES */
 .table {
     max-width: 900px;
-    border: 1px solid var(--light2);
+    /* border: 1.5px solid var(--bright); */
 }
 
 .table .row {
-    border-bottom: 1px solid var(--light2);
+    border-bottom: 1.5px solid var(--bright);
+    padding: .7rem !important;
 }
 
-.table .row:last-of-type {
-    border-bottom: none;
+.table .row:hover {
+    background-color: rgb(62, 163, 129, .05);
 }
 
-.table .th {
-    background-color: var(--light2_transparent) !important;
-    color: var(--bright2);
+.table .row:first-of-type {
+    background-color: var(--bright);
+}
+
+.table .th > div {
+    font-weight: 900 !important;
+}
+
+.tooltip-inner {
+    color: white !important;
 }
 
 /* HEADSHOT */
@@ -399,7 +421,7 @@ i.bg-light {
 }
 
 .navbar-nav a:hover {
-    color: var(--bright2) !important;
+    color: var(--bright) !important;
 }
 
 .navbar-brand span,
@@ -429,7 +451,7 @@ i.bg-light {
 }
 
 .dropdown-menu a:active, .dropdown-menu a:hover {
-    color: var(--bright2) !important;
+    color: var(--bright) !important;
     background-color: transparent;
 }
 
