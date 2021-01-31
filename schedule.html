@@ -46,9 +46,9 @@
             $('body>footer').load('./components/footer.html');
             $('body>header').load('./components/navbar.html');
             var scroll_pos = 0;
-            $(document).scroll(function() {
+            $(document).scroll(function () {
                 scroll_pos = $(this).scrollTop();
-                if(scroll_pos > 100) {
+                if (scroll_pos > 100) {
                     $('.navbar').css('box-shadow', '0px 2px 3px rgb(0,0,0,.15)');
                 } else {
                     $('.navbar').css('box-shadow', 'none');
@@ -58,7 +58,8 @@
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone-with-data-2012-2022.min.js'></script>
+    <script
+        src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone-with-data-2012-2022.min.js'></script>
     <script src='scripts/sheetsToJSON.js'></script>
     <!-- <script src='scripts/schedule.js'></script> -->
     <title>Pearl Hacks</title>
@@ -71,15 +72,17 @@
     <main>
         <div id='header-top'>
         </div>
-        <header class='py-0 m-0'><h1 class='py-3 m-0'>Events</h1>
+        <header class='py-0 m-0'>
+            <h1 class='py-3 m-0'>Events</h1>
         </header>
         <div id='header-bottom'>
         </div>
         </header>
         <div class='container py-5'>
-            <div id='schedule' class='d-flex justify-content-center flex-column align-content-center align-items-center p-3 pb-0'>
+            <div id='schedule'
+                class='d-flex justify-content-center flex-column align-content-center align-items-center p-3 pb-0'>
                 <h2>
-                Coming Soon
+                    Coming Soon
                 </h2>
             </div>
         </div>
