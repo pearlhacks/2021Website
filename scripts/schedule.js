@@ -8,14 +8,11 @@ function buildScheduleTable(data, header) {
     data.forEach((event) => {
         let row = "<div class='row mx-0 text-center py-2'>";
         row += `
-        <div class='col-3 font-weight-bold'>
+        <div class='col-6 font-weight-bold'>
             ${event['Time']}
         </div>
         <div class='col-6'>
             ${event['Event']}
-        </div>
-        <div class='col-3'>
-            ${event['Location']}
         </div>`;
         row += "</div>";
         html += row;
@@ -34,14 +31,11 @@ function buildTable(day) {
     day[Object.keys(day)[0]].forEach((event) => {
         let row = "<div class='row mx-0 text-center py-2'>";
         row += `
-        <div class='col-3 font-weight-bold'>
+        <div class='col-6 font-weight-bold'>
             ${event['Start Time'].format("h:mma")} - ${event['End Time'].format("h:mma z")}
         </div>
         <div class='col-6'>
             ${event['Event']}
-        </div>
-        <div class='col-3'>
-            ${event['Location']}
         </div>`;
         row += "</div>";
         html += row;
