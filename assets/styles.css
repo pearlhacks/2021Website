@@ -79,8 +79,8 @@ main a:hover {
     padding: .5rem 1.5rem;
 }
 
-.btn:hover {
-    background-color: var(--bright_shade1);
+.btn:hover, a.badge:hover {
+    background-color: var(--bright_shade1) !important;
     border-color: var(--bright_shade1);
 }
 

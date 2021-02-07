@@ -2,8 +2,8 @@ function buildWorkshops(data) {
     let html = "<div class='table rounded'>";
     const levelsMap = {
         "1": "No coding experience required",
-        "2": "Intermediate",
-        "3": "Advanced"
+        "2": "Some coding experience expected",
+        "3": "Strong coding or independent project experience expected"
     };
     html += `<div class='rounded-top row mx-0 th py-2'>
                 <div class='col-2 text-white'>
@@ -35,19 +35,19 @@ function buildWorkshops(data) {
                   <p>${event['Workshop Description']}</p>
                   <p><b>Tags: </b>${makeChipList(event['Workshop Tags'])}</p>
                   <p><b>Software Requirements: </b>${makeRequirementsList(event['Software'])}</p>
-                  
+                  <p><b>Prerequisites: </b>${makeRequirementsList(event['Prerequisites'])}</p>
                   ${event['Slide Deck'] ? `<a href="${event['Slide Deck']}" target="_new" class="badge badge-pill badge-primary bg-bright font-weight-normal p-2 px-3 ml-1">Slide Deck</a>` : ""}
                   ${event['Repository Link'] ? `<a href="${event['Repository Link']}" target="_new" class="badge badge-pill badge-primary bg-bright font-weight-normal p-2 px-3 ml-1">Repository Link</a>` : ""}
               </div>
             </div>
         </div>
         <div class='col-2'>
-            ${event['Host']}
+            ${event['Host']} (${event['Company']})
         </div>
         <div class='col-2'>
-            <img src="assets/images/workshop_levels/${event['Level']}.svg"
-                width="75px"
-                alt="Level ${event['Level']}" data-toggle="tooltip" title="${levelsMap[event['Level']]}">
+            ${levelsMap[event['Level']] ? `<img src="assets/images/workshop_levels/${event['Level']}.svg"
+            width="75px"
+            alt="Level ${event['Level']}" data-toggle="tooltip" title="${levelsMap[event['Level']]}">` : ''}
         </div>`;
         row += "</div>";
         html += row;
