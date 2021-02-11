@@ -5,7 +5,6 @@ function buildHTMLString(data) {
     let silver = "<div class='row'>";
     let custom = "<div class='row'>";
     data.forEach((sponsor) => {
-        console.log(sponsor)
         if (sponsor['Sponsor Tier'] === 'Pearl') {
             pearl += 
             `<div class='col-12 col-lg-6 pearl p-3'>
